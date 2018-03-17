@@ -23,6 +23,8 @@ public class InvertBufferImage {
         {
             for (int x = 0; x < out.getWidth(); x++) {
                 Color color = new Color( meninas.getRGB(x,y));
+
+
                 out.setRGB(x, y,new Color(color.getBlue(),color.getGreen(),color.getRed()).getRGB());
             }
         }
