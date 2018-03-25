@@ -14,7 +14,7 @@ Exercícios, Atividades, Desafios e TDE referentes a disciplina de Programação
 - [Kernel de Suavisação](https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Smooth)
 - [Kernel de Bordas](https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Border)
 - [Kernel de Nitidez](https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Nitidez)
-- HSV (Hue, Saturation, Light)
+- [HSV (Hue, Saturation, Light)](https://github.com/neoneper/ClassProg3D1/wiki/HSV)
 - Erode and Dilate Operation
 - Open and Close Operation
 - Border dectection with Dilate and Subtraction
