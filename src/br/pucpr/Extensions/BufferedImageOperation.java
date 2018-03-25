@@ -14,6 +14,10 @@ public class BufferedImageOperation {
     private static final float[][] Kernel_CrossBlur = {{0, 1.0f / 5.0f, 0}, {1.0f / 5.0f, 1.0f / 5.0f, 1.0f / 5.0f}, {0, 1.0f / 5.0f, 0},};
     private static final float Kernel_Laplace[][] = {{0,1,0}, {1,-4,1}, {0,1,0}};
     private static final float Kernel_LaplaceDiagonal[][] = {{0.5f,1,0.5f}, {1,-6,1}, {0.5f,1,0.5f}};
+    private static final float Kernel_Sharpen[][] = {{0,-1,0}, {-1,5,-1}, {0,-1,0}};
+    private static final float Kernel_EnbosOut[][] = {{-2,-2,0}, {-2,6,0}, {0,0,0}};
+    private static final float Kernel_EnbosInner[][] = {{0,0,0}, {0,6,-2}, {0,-2,-2}};
+    private static final float Kernel_EnbosCenter[][] = {{-2,-1,0}, {-1,-1,1}, {0,1,2}};
     private static final float Kernel_Sobelx[][] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
     private static final float Kernel_Sobely[][] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
     private static final float Kernel_Prewittx[][] = {{-1, 0, 1}, {-1, 0, 1}, {-1, 0, 1}};
@@ -56,6 +60,18 @@ public class BufferedImageOperation {
                 break;
             case LAPLACE_DIAGONAL:
                 filteredImage = convolve(img, Kernel_LaplaceDiagonal);
+                break;
+            case SHARPEN:
+                filteredImage = convolve(img, Kernel_Sharpen);
+                break;
+            case ENBOSS_OUT:
+                filteredImage = convolve(img, Kernel_EnbosOut);
+                break;
+            case ENBOSS_INNER:
+                filteredImage = convolve(img, Kernel_EnbosInner);
+                break;
+            case ENBOSS_CENTER:
+                filteredImage = convolve(img, Kernel_EnbosCenter);
                 break;
         }
 

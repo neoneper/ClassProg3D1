@@ -12,5 +12,9 @@ public enum BufferedImageOperationType {
     SOBEL,
     PREWITT,
     LAPLACE,
-    LAPLACE_DIAGONAL
+    LAPLACE_DIAGONAL,
+    SHARPEN,
+    ENBOSS_OUT,
+    ENBOSS_INNER,
+    ENBOSS_CENTER
 }

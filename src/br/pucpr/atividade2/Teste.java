@@ -19,7 +19,7 @@ public class Teste {
         BufferedImageOperation imageOp = new BufferedImageOperation();
 
         BufferedImage inImage = ImageIO.read(new File( "metroid.jpg"));
-        BufferedImage outImage = imageOp.convolve(inImage, BufferedImageOperationType.LAPLACE_DIAGONAL);
+        BufferedImage outImage = imageOp.convolve(inImage, BufferedImageOperationType.ENBOSS_OUT);
 
         ImageIO.write(outImage, "jpg",new File("metroidKernel.jpg"));
     }
