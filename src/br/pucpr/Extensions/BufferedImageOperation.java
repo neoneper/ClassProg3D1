@@ -12,18 +12,18 @@ public class BufferedImageOperation {
     private static final float[][] Kernel_GausianBlur = {{0, 0, 0, 5, 0, 0, 0}, {0, 5, 18, 32, 18, 5, 0}, {0, 18, 64, 100, 64, 18, 0}, {5, 32, 100, 100, 100, 32, 5}, {0, 18, 64, 100, 64, 18, 0}, {0, 5, 18, 32, 18, 5, 0}, {0, 0, 0, 5, 0, 0, 0},};
     private static final float[][] Kernel_SharpBlur = {{1.0f / 16.0f, 2.0f / 16, 1.0f / 16}, {1.0f / 9.0f, 4.0f / 16, 1.0f / 9.0f}, {1.0f / 16, 2.0f / 16, 1.0f / 16},};
     private static final float[][] Kernel_CrossBlur = {{0, 1.0f / 5.0f, 0}, {1.0f / 5.0f, 1.0f / 5.0f, 1.0f / 5.0f}, {0, 1.0f / 5.0f, 0},};
-    private static final float Kernel_Laplace[][] = {{0,1,0}, {1,-4,1}, {0,1,0}};
-    private static final float Kernel_LaplaceDiagonal[][] = {{0.5f,1,0.5f}, {1,-6,1}, {0.5f,1,0.5f}};
-    private static final float Kernel_Sharpen[][] = {{0,-1,0}, {-1,5,-1}, {0,-1,0}};
-    private static final float Kernel_EnbosOut[][] = {{-2,-2,0}, {-2,6,0}, {0,0,0}};
-    private static final float Kernel_EnbosInner[][] = {{0,0,0}, {0,6,-2}, {0,-2,-2}};
-    private static final float Kernel_EnbosCenter[][] = {{-2,-1,0}, {-1,-1,1}, {0,1,2}};
+    private static final float Kernel_Laplace[][] = {{0, 1, 0}, {1, -4, 1}, {0, 1, 0}};
+    private static final float Kernel_LaplaceDiagonal[][] = {{0.5f, 1, 0.5f}, {1, -6, 1}, {0.5f, 1, 0.5f}};
+    private static final float Kernel_Sharpen[][] = {{0, -1, 0}, {-1, 5, -1}, {0, -1, 0}};
+    private static final float Kernel_EnbosOut[][] = {{-2, -2, 0}, {-2, 6, 0}, {0, 0, 0}};
+    private static final float Kernel_EnbosInner[][] = {{0, 0, 0}, {0, 6, -2}, {0, -2, -2}};
+    private static final float Kernel_EnbosCenter[][] = {{-2, -1, 0}, {-1, -1, 1}, {0, 1, 2}};
     private static final float Kernel_Sobelx[][] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
     private static final float Kernel_Sobely[][] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
     private static final float Kernel_Prewittx[][] = {{-1, 0, 1}, {-1, 0, 1}, {-1, 0, 1}};
     private static final float Kernel_Prewitty[][] = {{1, 0, 1}, {1, 0, 1}, {1, 0, 1}};
 
-    public BufferedImage convolve(BufferedImage img, BufferedImageOperationType otype) {
+    public BufferedImage Convolve(BufferedImage img, BufferedImageOperationType otype) {
 
         BufferedImage filteredImage = null;
 
@@ -34,51 +34,51 @@ public class BufferedImageOperation {
 
         switch (otype) {
             case BOXBLUR:
-                filteredImage = convolve(img, Kernel_BoxBlur);
+                filteredImage = Convolve(img, Kernel_BoxBlur);
                 break;
             case CROSBLUR:
-                filteredImage = convolve(img, Kernel_CrossBlur);
+                filteredImage = Convolve(img, Kernel_CrossBlur);
                 break;
             case GAUSIANBLUR:
-                filteredImage = convolve(img, Kernel_GausianBlur);
+                filteredImage = Convolve(img, Kernel_GausianBlur);
                 break;
             case SHARPBLUR:
-                filteredImage = convolve(img, Kernel_SharpBlur);
+                filteredImage = Convolve(img, Kernel_SharpBlur);
                 break;
             case SOBEL:
-                tmpImage1 = convolve(img, Kernel_Sobelx);
-                tmpImage2 = convolve(img, Kernel_Sobely);
+                tmpImage1 = Convolve(img, Kernel_Sobelx);
+                tmpImage2 = Convolve(img, Kernel_Sobely);
                 filteredImage = CombineToBorder(tmpImage1, tmpImage2);
                 break;
             case PREWITT:
-                tmpImage1 = convolve(img, Kernel_Prewittx);
-                tmpImage2 = convolve(img, Kernel_Prewitty);
+                tmpImage1 = Convolve(img, Kernel_Prewittx);
+                tmpImage2 = Convolve(img, Kernel_Prewitty);
                 filteredImage = CombineToBorder(tmpImage1, tmpImage2);
                 break;
             case LAPLACE:
-                filteredImage = convolve(img, Kernel_Laplace);
+                filteredImage = Convolve(img, Kernel_Laplace);
                 break;
             case LAPLACE_DIAGONAL:
-                filteredImage = convolve(img, Kernel_LaplaceDiagonal);
+                filteredImage = Convolve(img, Kernel_LaplaceDiagonal);
                 break;
             case SHARPEN:
-                filteredImage = convolve(img, Kernel_Sharpen);
+                filteredImage = Convolve(img, Kernel_Sharpen);
                 break;
             case ENBOSS_OUT:
-                filteredImage = convolve(img, Kernel_EnbosOut);
+                filteredImage = Convolve(img, Kernel_EnbosOut);
                 break;
             case ENBOSS_INNER:
-                filteredImage = convolve(img, Kernel_EnbosInner);
+                filteredImage = Convolve(img, Kernel_EnbosInner);
                 break;
             case ENBOSS_CENTER:
-                filteredImage = convolve(img, Kernel_EnbosCenter);
+                filteredImage = Convolve(img, Kernel_EnbosCenter);
                 break;
         }
 
         return filteredImage;
     }
 
-    public BufferedImage convolve(BufferedImage img, float[][] kernel) {
+    public BufferedImage Convolve(BufferedImage img, float[][] kernel) {
         BufferedImage filteredImage = new BufferedImage(img.getWidth(), img.getHeight(), BufferedImage.TYPE_INT_RGB);
         int height = img.getHeight();
         int width = img.getWidth();
@@ -102,6 +102,36 @@ public class BufferedImageOperation {
 
         return filteredImage;
     }
+
+    public BufferedImage Pixelate(BufferedImage img, int size){
+
+        BufferedImage out = new BufferedImage(img.getWidth(), img.getHeight(), BufferedImage.TYPE_INT_RGB);
+
+        for (int x = 0; x < img.getWidth(); x++) {
+            for (int y = 0; y < img.getHeight(); y++) {
+                int px = (x/size) * size;
+                int py = (y/size) * size;
+                out.setRGB(x, y, img.getRGB(px,py));
+            }
+        }
+        return out;
+    }
+    public BufferedImage HSV(BufferedImage img, float hue, float saturation, float brightness){
+
+        BufferedImage out = new BufferedImage(img.getWidth(), img.getHeight(), BufferedImage.TYPE_INT_RGB);
+
+        for (int y = 0; y < img.getHeight(); y++)
+        {
+            for (int x = 0; x < img.getWidth(); x++)
+            {
+                Color pixelColor = new Color(img.getRGB(x,y));
+                Color modfyColor = ColorExtensions.ColorHSB(pixelColor,hue,saturation,brightness);
+                out.setRGB(x,y,modfyColor.getRGB());
+            }
+        }
+        return out;
+    }
+
 
     private int GetKernelPixelColor(BufferedImage image, int x, int y, float[][] kernel) {
         int height = image.getHeight();
@@ -135,7 +165,7 @@ public class BufferedImageOperation {
             }
         }
 
-        return ColorExtensions.RGBHexSaturate(r, g, b);
+        return ColorExtensions.RGBHexMinMax(r, g, b);
     }
 
     private BufferedImage CombineToBorder(BufferedImage img1, BufferedImage img2) {
@@ -153,7 +183,7 @@ public class BufferedImageOperation {
                 //Aplicando formula SOBEL ou Prewit de combinação de pixel
                 Color combinedColor = ColorExtensions.CombineSobel(pixelColor_img1, pixelColor_img2);
                 //Aplicando formula de saturação para garantir que a cor nao tenha valores irregulares <0 > 255
-                combinedColor = ColorExtensions.ColorSaturate(combinedColor);
+                combinedColor = ColorExtensions.ColorMinMax(combinedColor);
                 //Setndo Cor modificada na Imagem resultante
                 combinedImage.setRGB(x, y, combinedColor.getRGB());
             }
