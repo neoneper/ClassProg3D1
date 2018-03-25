@@ -11,9 +11,9 @@ Exercícios, Atividades, Desafios e TDE referentes a disciplina de Programação
 [![N|Solid](https://docs.google.com/uc?id=1-XNsEudz14nD_eKd0VTLDQl9Wx5SCl3I)](https://github.com/neoneper/ClassProg3D1/wiki/Image-Pixalates)
 
 # PROCESSAMENTO DE IMAGENS - EXERCÍCIOS
-- Kernel de Suavisação
-- Kernel de Bordas
-- Kernel de Nitidez
+- [Kernel de Suavisação](https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Smooth)
+- [Kernel de Bordas](https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Border)
+- [Kernel de Nitidez](https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Nitidez)
 - HSV (Hue, Saturation, Light)
 - Erode and Dilate Operation
 - Open and Close Operation
@@ -23,3 +23,6 @@ Exercícios, Atividades, Desafios e TDE referentes a disciplina de Programação
 
 [atividade1]: <https://github.com/neoneper/ClassProg3D1/blob/master/src/br/pucpr/atividade1/Atividade1.java> 
 [atividade2]: <https://github.com/neoneper/ClassProg3D1/blob/master/src/br/pucpr/atividade2/Atividade2.java>
+[kborder]: <https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Border>
+[ksmooth]:<https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Smooth>
+[ksharp]:<https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Nitidez>
