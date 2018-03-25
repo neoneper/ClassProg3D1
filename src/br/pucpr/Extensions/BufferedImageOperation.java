@@ -60,16 +60,24 @@ public class BufferedImageOperation {
     public BufferedImage convolve(BufferedImage img, float[][] kernel)
     {
         BufferedImage filteredImage = new BufferedImage(img.getWidth(), img.getHeight(), BufferedImage.TYPE_INT_RGB);
-        int rows = img.getHeight();
-        int cols = img.getWidth();
+        int height = img.getHeight();
+        int width = img.getWidth();
 
-        //Iterando Pixel a Pixel da Imagem para verificar o valor de kernel
-        for(int y = 0; y < rows; y++)
+        //Vou utilzizar o tamanho do kernel para limitar a iteração de pixels da IMAGEM para dentro
+        //do Bounding. Ou seja, pretendo navegar apenas nas bordas da imagem, para evitar pixel nullo.
+        //Assim sendo eu estarei sempre a metade do tamanho do meu kernel para dentro do bounding da imagem.
+        //Esta diferença de pixel que não serao iterados aqui, serão levados em consideracao na Iteracao do Kernel
+        //no Metodo GetKernelPixelColor.
+        int kernel_height = kernel[0].length;
+        int kernel_width = kernel[1].length;
+
+        //Iterando os Pixels da imagem.
+        for(int y = kernel_height/2; y < (height - kernel_height/2); y++)
         {
-            for(int x =0; x < cols; x++)
+            for(int x = kernel_width/2; x < (width - kernel_width/2); x++)
             {
-                int kernelPixelColor = GetKernelPixelColor(img, x, y, kernel);
-                filteredImage.setRGB(x,y, kernelPixelColor);
+                int kernelPixelRGB = GetKernelPixelColor(img, x, y, kernel);
+                filteredImage.setRGB(x,y, kernelPixelRGB);
             }
         }
 
@@ -80,47 +88,36 @@ public class BufferedImageOperation {
 
     private int GetKernelPixelColor(BufferedImage image, int x, int y, float[][] kernel)
     {
-        int rows = image.getHeight();
-        int cols = image.getWidth();
+        int height = image.getHeight();
+        int width = image.getWidth();
 
-
-        //BiDimencional array podem ser avaliando como um array de array.
-        //Para medir o tamanho basta verificar os indices do objeto array.
-        //Sendo um array 2D terei array[0] e array[1] ocupados com outro array.
-        int kernel_rows = kernel[0].length;
-        int kernel_cols = kernel[1].length;
+        int kernel_height = kernel[0].length;
+        int kernel_width = kernel[1].length;
 
         //Centro do kernel, so funciona para kerneis IMPAR e Quadrado. (3x3), (5,5), (7,7)...
         //Ex: k[3] = [0,(Center 1),2]
-        int kernel_centerX = kernel_cols/2;
-        int kernel_centerY = kernel_rows/2;
+        int kernel_centerX = kernel_width/2;
+        int kernel_centerY = kernel_height/2;
 
         int r = 0;
         int g = 0;
         int b = 0;
 
-        for (int ky=0; ky < kernel_rows; ky++)
+        for (int ky=0; ky < kernel_height; ky++)
         {
-            for(int kx=0;kx<kernel_cols;kx++)
+            for(int kx=0;kx<kernel_width;kx++)
             {
-                //Indices Flipado do Kernel Array. Ex ( cols: 3 - 1 -itY:0 = 2). (1). (0).
-                int kernelIndex_x = (kernel_cols -1 ) - kx;
-                int kerneIndex_y = (kernel_rows - 1) - ky;
-
                 //Indice do Kernel no array de pixels da imagem
-                int pixel_x = x + (kx - kernel_centerX);
-                int pixel_y = y + (ky - kernel_centerY);
+                int pixel_x = x + kx - kernel_centerX;
+                int pixel_y = y + ky - kernel_centerY;
 
-                //Verificando o Bounding da imagem pra ver se o pixel esta dentro
-                if( pixel_y >= 0 && pixel_y < rows && pixel_x >= 0 && pixel_x < cols )
-                {
-                    //Capturando PIXEL que sera tratado pelo kernel e aplicando
-                    //as modificações de RGB
-                    Color color = new Color(image.getRGB(pixel_x,pixel_y));
-                    r += color.getRed() * kernel[kernelIndex_x][kerneIndex_y];
-                    g += color.getGreen() * kernel[kernelIndex_x][kerneIndex_y];
-                    b += color.getBlue() * kernel[kernelIndex_x][kerneIndex_y];
-                }
+                //Capturando PIXEL que sera tratado pelo kernel e aplicando
+                //as modificações de RGB.
+                Color color = new Color(image.getRGB(pixel_x,pixel_y));
+                r += color.getRed() * kernel[kx][ky];
+                g += color.getGreen() * kernel[kx][ky];
+                b += color.getBlue() * kernel[kx][ky];
+
             }
         }
 
