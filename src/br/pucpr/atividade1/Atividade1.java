@@ -1,7 +1,4 @@
-package br.pucpr.exercicio1;
-
-import com.sun.javafx.geom.Vec3d;
-import com.sun.javafx.geom.Vec3f;
+package br.pucpr.atividade1;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

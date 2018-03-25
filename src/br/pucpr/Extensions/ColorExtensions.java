@@ -92,4 +92,45 @@ public class ColorExtensions {
 
         return result;
     }
+
+    public static int RGBHex(int r, int g, int b)
+    {
+        Color color = new Color(r,g,b);
+        return  color.getRGB();
+    }
+
+    public static int RGBHexSaturate(int r, int g, int b)
+    {
+        r = SatureMinMax(r);
+        g = SatureMinMax(g);
+        b = SatureMinMax(b);
+
+        Color color = new Color(r,g,b);
+        return  color.getRGB();
+    }
+    public static int RGBHexSaturate(Color color)
+    {
+
+        int r = SatureMinMax(color.getRed());
+        int g = SatureMinMax(color.getGreen());
+        int b = SatureMinMax(color.getBlue());
+
+        Color ncolor = new Color(r,g,b);
+        return  ncolor.getRGB();
+    }
+    public static Color ColorSaturate(Color color)
+    {
+
+        int r = SatureMinMax(color.getRed());
+        int g = SatureMinMax(color.getGreen());
+        int b = SatureMinMax(color.getBlue());
+
+       return new  Color(r,g,b);
+
+    }
+    public static int SatureMinMax(int v)
+    {
+        int result = v > 255? 255 : v < 0? 0:v;
+        return result;
+    }
 }
