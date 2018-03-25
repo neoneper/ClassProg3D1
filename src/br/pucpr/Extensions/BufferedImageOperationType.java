@@ -5,5 +5,12 @@ package br.pucpr.Extensions;
  */
 public enum BufferedImageOperationType {
 
-    BOXBLUR, CROSBLUR,GAUSIANBLUR, SHARPBLUR
+    BOXBLUR,
+    CROSBLUR,
+    GAUSIANBLUR,
+    SHARPBLUR,
+    SOBEL,
+    PREWITT,
+    LAPLACE,
+    LAPLACE_DIAGONAL
 }

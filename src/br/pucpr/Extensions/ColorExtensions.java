@@ -128,9 +128,49 @@ public class ColorExtensions {
        return new  Color(r,g,b);
 
     }
+    public static Color ColorSaturate(int r, int g, int b)
+    {
+
+        int sr = SatureMinMax(r);
+        int sg = SatureMinMax(g);
+        int sb = SatureMinMax(b);
+
+        return new  Color(sr,sg,sb);
+
+    }
     public static int SatureMinMax(int v)
     {
         int result = v > 255? 255 : v < 0? 0:v;
         return result;
+    }
+
+    public static Color CombinePrewitt(Color color1, Color color2)
+    {
+
+        return CombineSobel(color1,color2);
+
+    }
+    public static Color CombineSobel(Color color1, Color color2)
+    {
+        //RGB Imagem1
+        int r1 = color1.getRed();
+        int g1 = color1.getGreen();
+        int b1 = color1.getBlue();
+
+        //RGB Imagem2
+        int r2 = color2.getRed();
+        int g2 = color2.getGreen();
+        int b2 = color2.getBlue();
+
+        //Aplicando formula SOBEL de combinacao [ G = sqr(gx^, gy^)]
+        // JAVA DOCS: hypot(double x, double y)
+        // Returns sqrt(x2 +y2) without intermediate overflow or underflow.
+        //https://docs.oracle.com/javase/7/docs/api/java/lang/Math.html
+        int R = (int) Math.hypot(r1, r2);
+        int G = (int) Math.hypot(g1, g2);
+        int B = (int) Math.hypot(b1, b2);
+
+        return ColorExtensions.ColorSaturate(R,G,B);
+
     }
 }
