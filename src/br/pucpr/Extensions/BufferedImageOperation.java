@@ -3,26 +3,27 @@ package br.pucpr.Extensions;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
+
+
 /**
  * Created by devsecond on 24/03/2018.
+ * Esta classe permite trabalhar com diverças operações de manipulação de imagens e efeitos visuais.
+ * Contem metodos uteis para trabalhar com Convolução de Imagens utilizando Filtros e Kernel bem como
+ * para trabalhar com manipulação de efeitos Visuais.
  */
 public class BufferedImageOperation {
 
-    private static final float[][] Kernel_BoxBlur = {{1.0f / 9.0f, 1.0f / 9.0f, 1.0f / 9.0f}, {1.0f / 9.0f, 1.0f / 9.0f, 1.0f / 9.0f}, {1.0f / 9.0f, 1.0f / 9.0f, 1.0f / 9.0f},};
-    private static final float[][] Kernel_GausianBlur = {{0, 0, 0, 5, 0, 0, 0}, {0, 5, 18, 32, 18, 5, 0}, {0, 18, 64, 100, 64, 18, 0}, {5, 32, 100, 100, 100, 32, 5}, {0, 18, 64, 100, 64, 18, 0}, {0, 5, 18, 32, 18, 5, 0}, {0, 0, 0, 5, 0, 0, 0},};
-    private static final float[][] Kernel_SharpBlur = {{1.0f / 16.0f, 2.0f / 16, 1.0f / 16}, {1.0f / 9.0f, 4.0f / 16, 1.0f / 9.0f}, {1.0f / 16, 2.0f / 16, 1.0f / 16},};
-    private static final float[][] Kernel_CrossBlur = {{0, 1.0f / 5.0f, 0}, {1.0f / 5.0f, 1.0f / 5.0f, 1.0f / 5.0f}, {0, 1.0f / 5.0f, 0},};
-    private static final float Kernel_Laplace[][] = {{0, 1, 0}, {1, -4, 1}, {0, 1, 0}};
-    private static final float Kernel_LaplaceDiagonal[][] = {{0.5f, 1, 0.5f}, {1, -6, 1}, {0.5f, 1, 0.5f}};
-    private static final float Kernel_Sharpen[][] = {{0, -1, 0}, {-1, 5, -1}, {0, -1, 0}};
-    private static final float Kernel_EnbosOut[][] = {{-2, -2, 0}, {-2, 6, 0}, {0, 0, 0}};
-    private static final float Kernel_EnbosInner[][] = {{0, 0, 0}, {0, 6, -2}, {0, -2, -2}};
-    private static final float Kernel_EnbosCenter[][] = {{-2, -1, 0}, {-1, -1, 1}, {0, 1, 2}};
-    private static final float Kernel_Sobelx[][] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
-    private static final float Kernel_Sobely[][] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
-    private static final float Kernel_Prewittx[][] = {{-1, 0, 1}, {-1, 0, 1}, {-1, 0, 1}};
-    private static final float Kernel_Prewitty[][] = {{1, 0, 1}, {1, 0, 1}, {1, 0, 1}};
-
+    /**
+     * Convolução da origem para o destino.
+     * Convolução usando um kernel onde calcula-se o pixel de saída de um pixel de entrada multiplicando o kernel
+     * com os valores de modificação para o pixel de entrada. Isso permite que o pixel de saída seja afetado pela vizinhança
+     * do dos pixels cujo a origem é o pixel baseado no kernel central.
+     * Essa classe opera com dados de BufferedImage.
+     *
+     * @param img   Imagem Origem
+     * @param otype Um Kernel automático para gerar o pixel de saida.
+     * @return Imagem modificada pela Convolução do Kernel
+     */
     public BufferedImage Convolve(BufferedImage img, BufferedImageOperationType otype) {
 
         BufferedImage filteredImage = null;
@@ -34,51 +35,64 @@ public class BufferedImageOperation {
 
         switch (otype) {
             case BOXBLUR:
-                filteredImage = Convolve(img, Kernel_BoxBlur);
+                filteredImage = Convolve(img, BufferedImageOperationKernel.Kernel_BoxBlur);
                 break;
             case CROSBLUR:
-                filteredImage = Convolve(img, Kernel_CrossBlur);
+                filteredImage = Convolve(img, BufferedImageOperationKernel.Kernel_CrossBlur);
                 break;
             case GAUSIANBLUR:
-                filteredImage = Convolve(img, Kernel_GausianBlur);
+                filteredImage = Convolve(img, BufferedImageOperationKernel.Kernel_GausianBlur);
                 break;
             case SHARPBLUR:
-                filteredImage = Convolve(img, Kernel_SharpBlur);
+                filteredImage = Convolve(img, BufferedImageOperationKernel.Kernel_SharpBlur);
                 break;
             case SOBEL:
-                tmpImage1 = Convolve(img, Kernel_Sobelx);
-                tmpImage2 = Convolve(img, Kernel_Sobely);
+                tmpImage1 = Convolve(img, BufferedImageOperationKernel.Kernel_Sobelx);
+                tmpImage2 = Convolve(img, BufferedImageOperationKernel.Kernel_Sobely);
                 filteredImage = CombineToBorder(tmpImage1, tmpImage2);
                 break;
             case PREWITT:
-                tmpImage1 = Convolve(img, Kernel_Prewittx);
-                tmpImage2 = Convolve(img, Kernel_Prewitty);
+                tmpImage1 = Convolve(img, BufferedImageOperationKernel.Kernel_Prewittx);
+                tmpImage2 = Convolve(img, BufferedImageOperationKernel.Kernel_Prewitty);
                 filteredImage = CombineToBorder(tmpImage1, tmpImage2);
                 break;
             case LAPLACE:
-                filteredImage = Convolve(img, Kernel_Laplace);
+                filteredImage = Convolve(img, BufferedImageOperationKernel.Kernel_Laplace);
                 break;
             case LAPLACE_DIAGONAL:
-                filteredImage = Convolve(img, Kernel_LaplaceDiagonal);
+                filteredImage = Convolve(img, BufferedImageOperationKernel.Kernel_LaplaceDiagonal);
                 break;
             case SHARPEN:
-                filteredImage = Convolve(img, Kernel_Sharpen);
+                filteredImage = Convolve(img, BufferedImageOperationKernel.Kernel_Sharpen);
                 break;
             case ENBOSS_OUT:
-                filteredImage = Convolve(img, Kernel_EnbosOut);
+                filteredImage = Convolve(img, BufferedImageOperationKernel.Kernel_EnbosOut);
                 break;
             case ENBOSS_INNER:
-                filteredImage = Convolve(img, Kernel_EnbosInner);
+                filteredImage = Convolve(img, BufferedImageOperationKernel.Kernel_EnbosInner);
                 break;
             case ENBOSS_CENTER:
-                filteredImage = Convolve(img, Kernel_EnbosCenter);
+                filteredImage = Convolve(img, BufferedImageOperationKernel.Kernel_EnbosCenter);
                 break;
         }
 
         return filteredImage;
     }
 
+    /**
+     * Convolução da origem para o destino.
+     * Convolução usando um kernel onde calcula-se o pixel de saída de um pixel de entrada multiplicando o kernel
+     * com os valores de modificação para o pixel de entrada. Isso permite que o pixel de saída seja afetado pela vizinhança
+     * do dos pixels cujo a origem é o pixel baseado no kernel central.
+     * Essa classe opera com dados de BufferedImage.
+     *
+     * @param img    Imagem Origem
+     * @param kernel Array 2D Contendo os valores manuais de multiplicação Kernel para gerar o pixel de saida.
+     * @return Imagem modificada pela Convolução do Kernel
+     * @see BufferedImageOperationType como parametro para subistituir um kernel manual por um automático gerado pelo sistema
+     */
     public BufferedImage Convolve(BufferedImage img, float[][] kernel) {
+
         BufferedImage filteredImage = new BufferedImage(img.getWidth(), img.getHeight(), BufferedImage.TYPE_INT_RGB);
         int height = img.getHeight();
         int width = img.getWidth();
@@ -99,40 +113,90 @@ public class BufferedImageOperation {
             }
         }
 
-
         return filteredImage;
     }
 
-    public BufferedImage Pixelate(BufferedImage img, int size){
+    /**
+     * Pixaliza imagem de origem utilizando um tamanho de pixel especificado.
+     *
+     * @param img  Imagem de origem
+     * @param size Tamanho dos Pixels a serem gerados na nova imagem
+     * @return Retorna imagem pixelada
+     */
+    public BufferedImage Pixelate(BufferedImage img, int size) {
 
         BufferedImage out = new BufferedImage(img.getWidth(), img.getHeight(), BufferedImage.TYPE_INT_RGB);
 
         for (int x = 0; x < img.getWidth(); x++) {
             for (int y = 0; y < img.getHeight(); y++) {
-                int px = (x/size) * size;
-                int py = (y/size) * size;
-                out.setRGB(x, y, img.getRGB(px,py));
-            }
-        }
-        return out;
-    }
-    public BufferedImage HSV(BufferedImage img, float hue, float saturation, float brightness){
-
-        BufferedImage out = new BufferedImage(img.getWidth(), img.getHeight(), BufferedImage.TYPE_INT_RGB);
-
-        for (int y = 0; y < img.getHeight(); y++)
-        {
-            for (int x = 0; x < img.getWidth(); x++)
-            {
-                Color pixelColor = new Color(img.getRGB(x,y));
-                Color modfyColor = ColorExtensions.ColorHSB(pixelColor,hue,saturation,brightness);
-                out.setRGB(x,y,modfyColor.getRGB());
+                int px = (x / size) * size;
+                int py = (y / size) * size;
+                out.setRGB(x, y, img.getRGB(px, py));
             }
         }
         return out;
     }
 
+    /**
+     * Modifica os valores de Hue, Saturation e Brightness da Imagem. Os valores de HSV podem variar de
+     * -1 a 1 sendo o valor zero o atual HSV da imagem.
+     *
+     * @param img        Imagem origem
+     * @param hue        HUE -1 a 1 sendo 0 o Hue atual da imagem
+     * @param saturation Saturação -1 a 1 sendo 0 a saturação atual da imagem
+     * @param brightness Brilho -1 a 1 sendo 0 o Brilho atual da imagem
+     * @return Retorna imagem com os valores HSV modificados.
+     */
+    public BufferedImage HSV(BufferedImage img, float hue, float saturation, float brightness) {
 
+        BufferedImage out = new BufferedImage(img.getWidth(), img.getHeight(), img.getType());
+
+        for (int y = 0; y < img.getHeight(); y++) {
+            for (int x = 0; x < img.getWidth(); x++) {
+                Color pixelColor = new Color(img.getRGB(x, y));
+                Color modfyColor = ColorExtensions.ColorHSB(pixelColor, hue, saturation, brightness);
+                out.setRGB(x, y, modfyColor.getRGB());
+            }
+        }
+        return out;
+    }
+
+    /**
+     * Modifica os valores de Hue da Imagem. Os valores de HUE podem variar de
+     * -1 a 1 sendo o valor zero o atual HUE da imagem.
+     * @param img imagem de origem
+     * @param hue HUE -1 a 1 sendo 0 o Hue atual da imagem
+     * @return Imagem com Hue Modificado
+     */
+    public BufferedImage HUE(BufferedImage img, float hue) {
+
+        return HSV(img,hue,0,0);
+    }
+    /**
+     * Modifica os valores de Saturação da Imagem. Os valores de Saturação podem variar de
+     * -1 a 1 sendo o valor zero o atual Saturaçao da imagem.
+     * @param img imagem de origem
+     * @param saturation Saturaçao -1 a 1 sendo 0 o Saturaçao atual da imagem
+     * @return Imagem com Saturaçao Modificado
+     */
+    public BufferedImage SATURATION(BufferedImage img, float saturation) {
+
+        return HSV(img,0,saturation,0);
+    }
+    /**
+     * Modifica os valores de brightness da Imagem. Os valores de brightness podem variar de
+     * -1 a 1 sendo o valor zero o atual brightness da imagem.
+     * @param img imagem de origem
+     * @param brightness brightness -1 a 1 sendo 0 o Hue atual da imagem
+     * @return Imagem com brightness Modificado
+     */
+    public BufferedImage BRIGHTNESS(BufferedImage img, float brightness) {
+
+        return HSV(img,0,0,brightness);
+    }
+    /*
+    * Retorna a cor modificada por um kernel dos pixel nas coordenadas especificadas da imagem de origem
+    * */
     private int GetKernelPixelColor(BufferedImage image, int x, int y, float[][] kernel) {
         int height = image.getHeight();
         int width = image.getWidth();
@@ -168,6 +232,9 @@ public class BufferedImageOperation {
         return ColorExtensions.RGBHexMinMax(r, g, b);
     }
 
+    /*
+    * Combina 2 Imagens tulizando a formula de SOBEL e PREWITT para gerar bordas.
+    * */
     private BufferedImage CombineToBorder(BufferedImage img1, BufferedImage img2) {
         int height = img1.getHeight();
         int width = img1.getWidth();
