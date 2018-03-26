@@ -22,8 +22,8 @@ Entre aqui para ender como tudo funciona:
 
 # PROG3D!
 
-[atividade1]: <https://github.com/neoneper/ClassProg3D1/blob/master/src/br/pucpr/atividade1/Atividade1.java> 
-[atividade2]: <https://github.com/neoneper/ClassProg3D1/blob/master/src/br/pucpr/atividade2/Atividade2.java>
+[atividade1]: <(https://github.com/neoneper/ClassProg3D1/wiki/Pallet-Colors-Change> 
+[atividade2]: <https://github.com/neoneper/ClassProg3D1/wiki/Image-Pixalate>
 [kborder]: <https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Border>
 [ksmooth]:<https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Smooth>
 [ksharp]:<https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Nitidez>
