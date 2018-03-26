@@ -6,10 +6,12 @@ Entre aqui para ender como tudo funciona:
 
 # PROCESSAMENTO DE IMAGENS - ATIVIDADES
 
-* [Atividade1] - Modificação de Paleta
+* [Atividade1] - Modificação de Paleta:
 
 [![N|Solid](https://docs.google.com/uc?id=1bRwnf6KnkCWMrYgakZf1plA_DHMlqTp_)](https://github.com/neoneper/ClassProg3D1/wiki/Pallet-Colors-Change)
+
 * [Atividade2] - Pixalate + Sharpen + Brightness 50%
+
 [![N|Solid](https://docs.google.com/uc?id=1-XNsEudz14nD_eKd0VTLDQl9Wx5SCl3I)](https://github.com/neoneper/ClassProg3D1/wiki/Image-Pixalate)
 
 # PROCESSAMENTO DE IMAGENS - EXERCÍCIOS
@@ -23,8 +25,8 @@ Entre aqui para ender como tudo funciona:
 
 # PROG3D!
 
-[atividade1]: <(https://github.com/neoneper/ClassProg3D1/wiki/Pallet-Colors-Change> 
-[atividade2]: <https://github.com/neoneper/ClassProg3D1/wiki/Image-Pixalate>
+[Atividade1]: <(https://github.com/neoneper/ClassProg3D1/wiki/Pallet-Colors-Change> 
+[Atividade2]: <https://github.com/neoneper/ClassProg3D1/wiki/Image-Pixalate>
 [kborder]: <https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Border>
 [ksmooth]:<https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Smooth>
 [ksharp]:<https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Nitidez>
