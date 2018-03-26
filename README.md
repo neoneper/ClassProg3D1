@@ -1,7 +1,8 @@
 # PROG3D
 
 Exercícios, Atividades, Desafios e TDE referentes a disciplina de Programação de Jogos 3D (Turma U) - Curso Superior deTecnologia em Jogos Digitais - 2018 / 1º Sem
-
+# [WIKI - HOME PAGE](https://github.com/neoneper/ClassProg3D1/wiki)
+Entre aqui para ender como tudo funciona:
 
 # PROCESSAMENTO DE IMAGENS - ATIVIDADES
 
