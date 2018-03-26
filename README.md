@@ -6,7 +6,7 @@ Entre aqui para ender como tudo funciona:
 
 # PROCESSAMENTO DE IMAGENS - ATIVIDADES
 
-* [Atividade1] - Modificação de Paleta:
+* [Atividade1] Paleta de Cores:
 
 [![N|Solid](https://docs.google.com/uc?id=1bRwnf6KnkCWMrYgakZf1plA_DHMlqTp_)](https://github.com/neoneper/ClassProg3D1/wiki/Pallet-Colors-Change)
 
