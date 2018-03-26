@@ -9,7 +9,7 @@ import java.awt.image.BufferedImage;
  * Created by devsecond on 24/03/2018.
  * Esta classe permite trabalhar com diverças operações de manipulação de imagens e efeitos visuais.
  * Contem metodos uteis para trabalhar com Convolução de Imagens utilizando Filtros e Kernel bem como
- * para trabalhar com manipulação de efeitos Visuais.
+ * para trabalhar com manipulação de efeitos Visuais e palleta de cores
  */
 public class BufferedImageOperation {
 
@@ -194,6 +194,34 @@ public class BufferedImageOperation {
 
         return HSV(img,0,0,brightness);
     }
+
+
+    /**
+     * Utilize este metodo para modificar a palleta de caores da imagem original por uma pre-estabelecidada.
+     * Tenha em mente que a subistituição dos pixels originais da imagem serão feitas mediante a cor mais proxima
+     * da palleta.
+     * @param image Imagem origem
+     * @param pallete paleta de cores Hexadecimais
+     * @return Imagem com pixels subistituidos por cores da paleta.
+     */
+    public BufferedImage ChangeColorPallet(BufferedImage image, int[] pallete)
+    {
+
+        BufferedImage changedImage = new BufferedImage(image.getWidth(),image.getHeight(),image.getType());
+
+        for(int y = 0; y < changedImage.getHeight();y++)
+        {
+            for(int x =0; x< changedImage.getWidth();x++)
+            {
+                Color colorFrom = new Color( image.getRGB(x,y));
+                Color colorToChange = ColorExtensions.ColorNear(colorFrom,pallete);
+                changedImage.setRGB(x, y, colorToChange.getRGB());
+            }
+        }
+
+        return  changedImage;
+    }
+
     /*
     * Retorna a cor modificada por um kernel dos pixel nas coordenadas especificadas da imagem de origem
     * */
@@ -258,5 +286,8 @@ public class BufferedImageOperation {
 
         return combinedImage;
     }
+
+
+
 
 }

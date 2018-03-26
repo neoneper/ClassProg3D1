@@ -5,6 +5,8 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+
+import br.pucpr.Extensions.BufferedImageOperation;
 import br.pucpr.Extensions.ColorExtensions;
 
 /**
@@ -38,22 +40,13 @@ public class Atividade1 {
 
     public static void main(String[] args) throws IOException {
 
-        //Imagem carregada
+        //Inicializando objeto que me permite trabalhar com convolução e efeitos visuais na imagem origem
+        BufferedImageOperation imageOperation = new BufferedImageOperation();
+        //Imagem carregada para manipulação das cores
         BufferedImage loadedImage = ImageIO.read(new File("puppy.jpg"));
-        //Imagem em branco criada com as mesmas dimenções da imagem carregada. Esta imagem vai conter a nova, gerada com as
-        //cores da paleta pinterest
-        BufferedImage outImage = new BufferedImage(loadedImage.getWidth(),loadedImage.getHeight(),BufferedImage.TYPE_INT_RGB );
-
-        for(int y = 0; y < outImage.getHeight();y++)
-        {
-            for(int x =0; x< outImage.getWidth();x++)
-            {
-                Color colorFrom = new Color( loadedImage.getRGB(x,y));
-                Color colorToChange = ColorExtensions.ColorNear(colorFrom,pallete48);
-                outImage.setRGB(x, y, colorToChange.getRGB());
-            }
-        }
-
-        ImageIO.write(outImage, "jpg", new File("pyppy2.jpg"));
+        //Imagem de saida contendo as cores modificadas pela palleta especificada
+        BufferedImage outImage = imageOperation.ChangeColorPallet(loadedImage, pallete48);
+        //Salvando Imagem
+        ImageIO.write(outImage, "jpg", new File("puppy2.jpg"));
     }
 }
