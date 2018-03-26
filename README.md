@@ -23,6 +23,51 @@ Entre aqui para ender como tudo funciona:
 - Open and Close Operation
 - Border dectection with Dilate and Subtraction
 
+# A BIBLIOTECA:
+
+# [Extensions](https://github.com/neoneper/ClassProg3D1/tree/master/src/br/pucpr/Extensions)
+Contém todas as classes da biblioteca para trabalhar com manipulação de BufferedImages e objetos do tipo Color.
+
+* [ColorExtensions](https://github.com/neoneper/ClassProg3D1/blob/master/src/br/pucpr/Extensions/ColorExtensions.java): Contém métodos estáticos uteis para trabalhar com Objetos do tipo Color.
+ * - Calculo de distancia entre dois Objectos Color
+ * - Conversão de Cor em Formato Hexadecimal para Objeto Color e vice versa.
+ * - Pesquisa da cor mais próxima a partir de uma lista de cores em formato Hexadecimal
+ * - Manipulação do HSV da cor com conversão automática para objeto
+ 
+* [BufferedImageOperation](https://github.com/neoneper/ClassProg3D1/blob/master/src/br/pucpr/Extensions/BufferedImageOperation.java)
+ * - Permite trabalhar com diversas operações de manipulação de imagens e efeitos visuais.
+ * - Convolução de Imagens utilizando Filtros e Kernel
+ * - HSV
+
+* [BufferedImageOperationKernel](https://github.com/neoneper/ClassProg3D1/blob/master/src/br/pucpr/Extensions/BufferedImageOperationKernel.java)
+* - Esta classe contém diversos arrays 2D para serem utilizados como Kernel em Convolução de imagens automaticamente.
+
+* [BufferedImageOperationType](https://github.com/neoneper/ClassProg3D1/blob/master/src/br/pucpr/Extensions/BufferedImageOperationType.java)
+* - Enum contendo todos as matrizes de kernel cadastradas em _BufferedImageOperationKernel_.
+
+# ONDE ENCONTRO AS ATIVIDADES E EXERCÍCIOS?
+Todas as atividades feitas em sala de aula bem como passadas pelo BlackBoard estão sendo armazenadas em:
+[https://github.com/neoneper/ClassProg3D1/tree/master/src/br/pucpr](https://github.com/neoneper/ClassProg3D1/tree/master/src/br/pucpr)
+
+# FEATURES:
+
+[HSV](https://github.com/neoneper/ClassProg3D1/wiki/HSV)
+Manipulando Hue, Saturation e Brightness da imagem;
+
+[PIXALATE](https://github.com/neoneper/ClassProg3D1/wiki/Image-Pixalate)
+Aplicando Pixelate á Imagem.
+
+[BORDERS](https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Border)
+Usando Kernel de bordas.
+
+[SHARP](https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Nitidez)
+Usando Kernel de nitidez
+
+[BLUR](https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Smooth)
+Usando Kernel de Suavização
+
+[PALLET](https://github.com/neoneper/ClassProg3D1/wiki/Pallet-Colors-Change)
+Modificando Paletas de cores
 # PROG3D!
 
 [Atividade1]: <https://github.com/neoneper/ClassProg3D1/wiki/Pallet-Colors-Change> 
