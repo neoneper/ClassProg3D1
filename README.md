@@ -25,7 +25,7 @@ Entre aqui para ender como tudo funciona:
 
 # PROG3D!
 
-[Atividade1]: <(https://github.com/neoneper/ClassProg3D1/wiki/Pallet-Colors-Change> 
+[Atividade1]: <https://github.com/neoneper/ClassProg3D1/wiki/Pallet-Colors-Change> 
 [Atividade2]: <https://github.com/neoneper/ClassProg3D1/wiki/Image-Pixalate>
 [kborder]: <https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Border>
 [ksmooth]:<https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Smooth>
