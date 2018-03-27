@@ -2,7 +2,8 @@ package br.pucpr.Extensions;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -288,6 +289,30 @@ public class BufferedImageOperation {
     }
 
 
+    public int[] GetHistogram(BufferedImage image)
+    {
 
+        List<Integer> intList = new ArrayList<Integer>();
+
+        for(int y = 0; y < image.getHeight();y++)
+        {
+            for(int x =0; x< image.getWidth();x++)
+            {
+                Color colorFrom = new Color( image.getRGB(x,y));
+
+
+            }
+        }
+
+        return  changedImage;
+    }
+    public int[] GetHistogramAcc(int[] histogram)
+    {
+
+    }
+    public int[] GetHistogramAcc(BufferedImage img)
+    {
+
+    }
 
 }

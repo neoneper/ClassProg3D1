@@ -243,4 +243,19 @@ public class ColorExtensions {
         return new Color(Color.HSBtoRGB(pixelHue,pixelSaturation,pixelBright));
     }
 
+    /**
+     * Gertorna o tom de Cinza do Objeto Color
+     *  @param color
+     */
+    public static int GetGrayTone(Color color)
+    {
+        int r = color.getRed();
+        int g = color.getGreen();
+        int b = color.getBlue();
+
+        int gray = (r+g+b)/3;
+
+        return  gray;
+    }
+
 }
