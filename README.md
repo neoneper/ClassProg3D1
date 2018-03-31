@@ -14,6 +14,11 @@ Entre aqui para ender como tudo funciona:
 
 [![N|Solid](https://docs.google.com/uc?id=1-XNsEudz14nD_eKd0VTLDQl9Wx5SCl3I)](https://github.com/neoneper/ClassProg3D1/wiki/Image-Pixalate)
 
+* [Atividade3] - Histogramas:
+
+[![N|Solid](https://docs.google.com/uc?id=1crMe2DYY8WkwqX5PyCBFy0YXH0E7-NUT)]()
+
+
 # PROCESSAMENTO DE IMAGENS - EXERCÍCIOS
 - [Kernel de Suavisação](https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Smooth)
 - [Kernel de Bordas](https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Border)
@@ -22,9 +27,16 @@ Entre aqui para ender como tudo funciona:
 - Erode and Dilate Operation
 - Open and Close Operation
 - Border dectection with Dilate and Subtraction
-
+- Histograma (Quantitativo, Acumulativo, Normalizdo)
+- Histograma Grafico2D
+- Histograma Equalização de imagens
+# DESAFIOS:
+- Desafio1 -
+- Desafio2 -
+- Desafio3 -
+- Desafio4 - Histograma em imagens coloridas usando Brightness e Saturate
 # A BIBLIOTECA:
-
+Conheça os objetos criados para trabalhar com professamento de imagens:
 # [Extensions](https://github.com/neoneper/ClassProg3D1/tree/master/src/br/pucpr/Extensions)
 Contém todas as classes da biblioteca para trabalhar com manipulação de BufferedImages e objetos do tipo Color.
 
@@ -72,6 +84,7 @@ Modificando Paletas de cores
 
 [Atividade1]: <https://github.com/neoneper/ClassProg3D1/wiki/Pallet-Colors-Change> 
 [Atividade2]: <https://github.com/neoneper/ClassProg3D1/wiki/Image-Pixalate>
+[Atividade3]: <>
 [kborder]: <https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Border>
 [ksmooth]:<https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Smooth>
 [ksharp]:<https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Nitidez>
