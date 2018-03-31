@@ -100,7 +100,7 @@ Gerando gráficos de histogramas:
 
 [Atividade1]: <https://github.com/neoneper/ClassProg3D1/wiki/Pallet-Colors-Change> 
 [Atividade2]: <https://github.com/neoneper/ClassProg3D1/wiki/Image-Pixalate>
-[Atividade3]: <>
+[Atividade3]: <https://github.com/neoneper/ClassProg3D1/wiki/Histograma-Equalization>
 [kborder]: <https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Border>
 [ksmooth]:<https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Smooth>
 [ksharp]:<https://github.com/neoneper/ClassProg3D1/wiki/Kernel-Nitidez>
