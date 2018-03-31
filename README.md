@@ -27,7 +27,7 @@ Entre aqui para ender como tudo funciona:
 - Erode and Dilate Operation
 - Open and Close Operation
 - Border dectection with Dilate and Subtraction
-- Histograma (Quantitativo, Acumulativo, Normalizdo)
+- [Histograma (Quantitativo, Acumulativo, Normalizdo)](https://github.com/neoneper/ClassProg3D1/wiki/Histograma)
 - Histograma Grafico2D
 - Histograma Equalização de imagens
 # DESAFIOS:
