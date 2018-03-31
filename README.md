@@ -34,7 +34,7 @@ Entre aqui para ender como tudo funciona:
 - Desafio1 -
 - Desafio2 -
 - Desafio3 -
-- Desafio4 - Histograma em imagens coloridas usando Brightness e Saturate
+- [Desafio4 - Histograma em imagens coloridas usando Brightness e Saturate](https://github.com/neoneper/ClassProg3D1/wiki/Histograma-Equalization-Color)
 # A BIBLIOTECA:
 Conheça os objetos criados para trabalhar com professamento de imagens:
 # [Extensions](https://github.com/neoneper/ClassProg3D1/tree/master/src/br/pucpr/Extensions)
@@ -56,6 +56,12 @@ Contém todas as classes da biblioteca para trabalhar com manipulação de Buffe
 
 * [BufferedImageOperationType](https://github.com/neoneper/ClassProg3D1/blob/master/src/br/pucpr/Extensions/BufferedImageOperationType.java)
 * - Enum contendo todos as matrizes de kernel cadastradas em _BufferedImageOperationKernel_.
+
+* [BufferedImageEqualizeType](https://github.com/neoneper/ClassProg3D1/blob/master/src/br/pucpr/Extensions/BufferedImageEqualizeType.java)
+* - Enum contendo todas as equalizações possiveis para geração de Histogramas.
+Tenha em mente que existem 2 Metodos possiveis que não estão listados nestes Enumeradoes sendo eles as equalizações de RGB e HSV. Ambos são metodos experimentais. EqualizeHSV(...) e EqualizeRGB(...)
+* [BufferedImageRect](https://github.com/neoneper/ClassProg3D1/blob/master/src/br/pucpr/Extensions/BufferedImageRect.java)
+* - Permite setar um BOUNDING para trabalhar com BufferedImage. Muito util para trabalhar com Graphics2D
 
 # ONDE ENCONTRO AS ATIVIDADES E EXERCÍCIOS?
 Todas as atividades feitas em sala de aula bem como passadas pelo BlackBoard estão sendo armazenadas em:
@@ -80,6 +86,16 @@ Usando Kernel de Suavização
 
 [PALLET](https://github.com/neoneper/ClassProg3D1/wiki/Pallet-Colors-Change)
 Modificando Paletas de cores
+
+[HISTOGRAMA](https://github.com/neoneper/ClassProg3D1/wiki/Histograma)
+Gerando Histogramas:
+
+[EQUALIZAÇÃO DE HISTOGRMAS](https://github.com/neoneper/ClassProg3D1/wiki/Histograma-Equalization)
+Equalizando Histogramas:
+
+[GRAFICO DE HISTOGRAMAS](https://github.com/neoneper/ClassProg3D1/wiki/Histograma-Graphics)
+Gerando gráficos de histogramas:
+
 # PROG3D!
 
 [Atividade1]: <https://github.com/neoneper/ClassProg3D1/wiki/Pallet-Colors-Change> 
