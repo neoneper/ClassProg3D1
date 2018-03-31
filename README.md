@@ -29,7 +29,7 @@ Entre aqui para ender como tudo funciona:
 - Border dectection with Dilate and Subtraction
 - [Histograma (Quantitativo, Acumulativo, Normalizdo)](https://github.com/neoneper/ClassProg3D1/wiki/Histograma)
 - Histograma Grafico2D
-- Histograma Equalização de imagens
+- [Histograma Equalização de imagens](https://github.com/neoneper/ClassProg3D1/wiki/Histograma-Equalization)
 # DESAFIOS:
 - Desafio1 -
 - Desafio2 -
