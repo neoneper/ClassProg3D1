@@ -16,7 +16,7 @@ Entre aqui para ender como tudo funciona:
 
 * [Atividade3] - Histogramas Equalização:
 
-[![N|Solid](https://docs.google.com/uc?id=1KcbUVOg2rBt0wR1ENQJDB-tUziKDGX5x)]()
+[![N|Solid](https://docs.google.com/uc?id=1KcbUVOg2rBt0wR1ENQJDB-tUziKDGX5x)](https://github.com/neoneper/ClassProg3D1/wiki/Histograma-Equalization)
 
 
 # PROCESSAMENTO DE IMAGENS - EXERCÍCIOS
