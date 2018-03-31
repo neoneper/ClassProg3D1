@@ -14,9 +14,9 @@ Entre aqui para ender como tudo funciona:
 
 [![N|Solid](https://docs.google.com/uc?id=1-XNsEudz14nD_eKd0VTLDQl9Wx5SCl3I)](https://github.com/neoneper/ClassProg3D1/wiki/Image-Pixalate)
 
-* [Atividade3] - Histogramas:
+* [Atividade3] - Histogramas Equalização:
 
-[![N|Solid](https://docs.google.com/uc?id=1crMe2DYY8WkwqX5PyCBFy0YXH0E7-NUT)]()
+[![N|Solid](https://docs.google.com/uc?id=1KcbUVOg2rBt0wR1ENQJDB-tUziKDGX5x)]()
 
 
 # PROCESSAMENTO DE IMAGENS - EXERCÍCIOS
