@@ -93,6 +93,7 @@ public class ColorExtensions {
 
     /**
      * Converte os canais manuais de Rgb do parametro em um RGB Hexadecimal
+     *
      * @param r Red
      * @param g Green
      * @param b Blue
@@ -103,9 +104,50 @@ public class ColorExtensions {
         return color.getRGB();
     }
 
+    public static int Red(int HexRGBColor) {
+        Color color = new Color(HexRGBColor);
+        return color.getRed();
+    }
+
+    public static int Green(int HexRGBColor) {
+        Color color = new Color(HexRGBColor);
+        return color.getGreen();
+    }
+
+    public static int Blue(int HexRGBColor) {
+        Color color = new Color(HexRGBColor);
+        return color.getBlue();
+    }
+
+    public static int Brightness(int HexRGBColor) {
+        Color color = new Color(HexRGBColor);
+
+        float[] hsb = new float[3];
+        Color.RGBtoHSB(color.getRed(), color.getGreen(), color.getBlue(), hsb);
+        return  (int)(hsb[2] * 255);
+
+    }
+
+    public static int Saturations(int HexRGBColor) {
+        Color color = new Color(HexRGBColor);
+
+        float[] hsb = new float[3];
+        Color.RGBtoHSB(color.getRed(), color.getGreen(), color.getBlue(), hsb);
+        return  (int)(hsb[1] * 255);
+
+    }
+
+    public static int Hue(int HexRGBColor) {
+        Color color = new Color(HexRGBColor);
+        float[] hsb = Color.RGBtoHSB(color.getRed(), color.getGreen(), color.getBlue(), null);
+
+        return (int) hsb[0] * 255;
+    }
+
     /**
      * Converte os canais manuais de Rgb do parametro em um RGB Hexadecimal, respeitando os valores
      * máximos permitido pelos pixeis de cor cuja variacão é 0 -255
+     *
      * @param r Red
      * @param g Green
      * @param b Blue
@@ -119,9 +161,11 @@ public class ColorExtensions {
         Color color = new Color(r, g, b);
         return color.getRGB();
     }
+
     /**
      * Converte um objeto do tipo Color em um RGB Hexadecimal, respeitando os valores
      * máximos permitido pelos pixeis de cor cuja variacão é 0 -255
+     *
      * @param color Objeto cor
      * @return RGB Hexadecimal com os valores dos canais RGB variando de 0 a 255
      */
@@ -134,10 +178,12 @@ public class ColorExtensions {
         Color ncolor = new Color(r, g, b);
         return ncolor.getRGB();
     }
+
     /**
      * Reguraliza um objeto do tipo cor cujo os valores de RGB não estejam nos intervalos de 0 a 255
      * Não tenho certeza o Java permite a criacao de um objeto Color com os canais fora do padrao mas se permitir
      * utilize este metodo para manter o mesmo correto.
+     *
      * @param color Objeto cor origem
      * @return Objeto Color com os canais RGB dentro do intervalo 0-255
      */
@@ -150,9 +196,11 @@ public class ColorExtensions {
         return new Color(r, g, b);
 
     }
+
     /**
      * Converte os canais manuais de Rgb do parametro em um Objeto Color, respeitando os valores
      * máximos permitido pelos pixeis de cor cuja variacão é 0 -255.
+     *
      * @param r Red
      * @param g Green
      * @param b Blue
@@ -171,6 +219,7 @@ public class ColorExtensions {
     /**
      * Verifica um valor nos itervalos de 0 a 255, padrão dos canais RGB de um pixel mantendo
      * o mesmo dentro deste intervalo
+     *
      * @param v Valor a ser verificado
      * @return Retorna o valor especificado ou modificado para manter o padrao normalizado 0 a 255
      */
@@ -182,6 +231,7 @@ public class ColorExtensions {
     /**
      * Combina 2 objetos de cores utilizando a formula de SOBEL e PREWITT para gerar uma nova cor,
      * resultado desta combinação.
+     *
      * @param color1
      * @param color2
      * @return Combinação das 2 Cores utilizando a formula de SOBEL e PREWITT
@@ -191,9 +241,11 @@ public class ColorExtensions {
         return CombineSobel(color1, color2);
 
     }
+
     /**
      * Combina 2 objetos de cores utilizando a formula de SOBEL e PREWITT para gerar uma nova cor,
      * resultado desta combinação
+     *
      * @param color1
      * @param color2
      * @return Combinação das 2 Cores utilizando a formula de SOBEL e PREWITT
@@ -226,8 +278,8 @@ public class ColorExtensions {
      * Objeto Color modificado.
      * Tenha em mente que os valores HSB serão relativos aos valores ja existentes na cor origem.
      *
-     * @param color Objeto Cor origem
-     * @param hue HUE 0-1
+     * @param color      Objeto Cor origem
+     * @param hue        HUE 0-1
      * @param saturation Saturação 0-1
      * @param brightness Brilho 0-1
      * @return
@@ -240,22 +292,27 @@ public class ColorExtensions {
         float pixelSaturation = hsb[1] + saturation > 1.0f ? 1.0f : hsb[1] + saturation < 0.0f ? 0 : hsb[1] + saturation;
         float pixelBright = hsb[2] + brightness > 1.0f ? 1.0f : hsb[2] + brightness < 0.0f ? 0 : hsb[2] + brightness;
 
-        return new Color(Color.HSBtoRGB(pixelHue,pixelSaturation,pixelBright));
+        return new Color(Color.HSBtoRGB(pixelHue, pixelSaturation, pixelBright));
     }
 
     /**
      * Gertorna o tom de Cinza do Objeto Color
-     *  @param color
+     *
+     * @param color
      */
-    public static int GetGrayTone(Color color)
-    {
+    public static int GetGrayTone(Color color) {
         int r = color.getRed();
         int g = color.getGreen();
         int b = color.getBlue();
 
-        int gray = (r+g+b)/3;
+        int gray = (r + g + b) / 3;
 
-        return  gray;
+        return gray;
+    }
+
+    public static int GetGrayTone(int HexRGBColor) {
+        Color color = HexToColor(HexRGBColor);
+        return GetGrayTone(color);
     }
 
 }

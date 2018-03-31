@@ -1,8 +1,13 @@
 package br.pucpr.Extensions;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.IntSummaryStatistics;
 import java.util.List;
 
 
@@ -165,35 +170,40 @@ public class BufferedImageOperation {
     /**
      * Modifica os valores de Hue da Imagem. Os valores de HUE podem variar de
      * -1 a 1 sendo o valor zero o atual HUE da imagem.
+     *
      * @param img imagem de origem
      * @param hue HUE -1 a 1 sendo 0 o Hue atual da imagem
      * @return Imagem com Hue Modificado
      */
     public BufferedImage HUE(BufferedImage img, float hue) {
 
-        return HSV(img,hue,0,0);
+        return HSV(img, hue, 0, 0);
     }
+
     /**
      * Modifica os valores de Saturação da Imagem. Os valores de Saturação podem variar de
      * -1 a 1 sendo o valor zero o atual Saturaçao da imagem.
-     * @param img imagem de origem
+     *
+     * @param img        imagem de origem
      * @param saturation Saturaçao -1 a 1 sendo 0 o Saturaçao atual da imagem
      * @return Imagem com Saturaçao Modificado
      */
     public BufferedImage SATURATION(BufferedImage img, float saturation) {
 
-        return HSV(img,0,saturation,0);
+        return HSV(img, 0, saturation, 0);
     }
+
     /**
      * Modifica os valores de brightness da Imagem. Os valores de brightness podem variar de
      * -1 a 1 sendo o valor zero o atual brightness da imagem.
-     * @param img imagem de origem
+     *
+     * @param img        imagem de origem
      * @param brightness brightness -1 a 1 sendo 0 o Hue atual da imagem
      * @return Imagem com brightness Modificado
      */
     public BufferedImage BRIGHTNESS(BufferedImage img, float brightness) {
 
-        return HSV(img,0,0,brightness);
+        return HSV(img, 0, 0, brightness);
     }
 
 
@@ -201,26 +211,24 @@ public class BufferedImageOperation {
      * Utilize este metodo para modificar a palleta de caores da imagem original por uma pre-estabelecidada.
      * Tenha em mente que a subistituição dos pixels originais da imagem serão feitas mediante a cor mais proxima
      * da palleta.
-     * @param image Imagem origem
+     *
+     * @param image   Imagem origem
      * @param pallete paleta de cores Hexadecimais
      * @return Imagem com pixels subistituidos por cores da paleta.
      */
-    public BufferedImage ChangeColorPallet(BufferedImage image, int[] pallete)
-    {
+    public BufferedImage ChangeColorPallet(BufferedImage image, int[] pallete) {
 
-        BufferedImage changedImage = new BufferedImage(image.getWidth(),image.getHeight(),image.getType());
+        BufferedImage changedImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
 
-        for(int y = 0; y < changedImage.getHeight();y++)
-        {
-            for(int x =0; x< changedImage.getWidth();x++)
-            {
-                Color colorFrom = new Color( image.getRGB(x,y));
-                Color colorToChange = ColorExtensions.ColorNear(colorFrom,pallete);
+        for (int y = 0; y < changedImage.getHeight(); y++) {
+            for (int x = 0; x < changedImage.getWidth(); x++) {
+                Color colorFrom = new Color(image.getRGB(x, y));
+                Color colorToChange = ColorExtensions.ColorNear(colorFrom, pallete);
                 changedImage.setRGB(x, y, colorToChange.getRGB());
             }
         }
 
-        return  changedImage;
+        return changedImage;
     }
 
     /*
@@ -268,7 +276,7 @@ public class BufferedImageOperation {
         int height = img1.getHeight();
         int width = img1.getWidth();
 
-        BufferedImage combinedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        BufferedImage combinedImage = new BufferedImage(width, height, img1.getType());
 
         //Iterando os Pixels da imagem.
         for (int y = 0; y < height; y++) {
@@ -288,31 +296,686 @@ public class BufferedImageOperation {
         return combinedImage;
     }
 
+    /**
+     * Gera uma lista de 256 tons com quantificação de tons de cinza,
+     * contendo quantas vezes determinado tom na escala 255 se repete.
+     *
+     * @param image Imagem a ser gerado o histograma
+     * @return Lista quantificada onde cada elemento do array é o tom e o valor é a quantidade
+     * de vezes que este tom se repete
+     */
+    public int[] GetGrayHistogram(BufferedImage image) {
+        int[] accTone = new int[256];
 
-    public int[] GetHistogram(BufferedImage image)
-    {
-
-        List<Integer> intList = new ArrayList<Integer>();
-
-        for(int y = 0; y < image.getHeight();y++)
-        {
-            for(int x =0; x< image.getWidth();x++)
-            {
-                Color colorFrom = new Color( image.getRGB(x,y));
-
-
+        for (int y = 0; y < image.getHeight(); y++) {
+            for (int x = 0; x < image.getWidth(); x++) {
+                int pixelGrayTone = ColorExtensions.GetGrayTone(image.getRGB(x, y));
+                //Quantificando na escala de cores 255 quantas vezes este TON se repete
+                accTone[pixelGrayTone] += 1;
             }
         }
 
-        return  changedImage;
+        return accTone;
     }
-    public int[] GetHistogramAcc(int[] histogram)
-    {
+
+    /**
+     * Gera uma lista de 255 tons com quantificação de tons de Vermelho,
+     * contendo quantas vezes determinado tom na escala 255 se repete.
+     *
+     * @param image Imagem a ser gerado o histograma
+     * @return Lista quantificada onde cada elemento do array é o tom e o valor é a quantidade
+     * de vezes que este tom se repete
+     */
+    public int[] GetRedHistogram(BufferedImage image) {
+        int[] accTone = new int[256];
+
+        for (int y = 0; y < image.getHeight(); y++) {
+            for (int x = 0; x < image.getWidth(); x++) {
+                int pixelTone = ColorExtensions.Red(image.getRGB(x, y));
+                //Quantificando na escala de cores 255 quantas vezes este TON se repete
+                accTone[pixelTone] += 1;
+            }
+        }
+
+        return accTone;
+    }
+
+    /**
+     * Gera uma lista de 256 tons com quantificação de tons de Verde,
+     * contendo quantas vezes determinado tom na escala 255 se repete.
+     *
+     * @param image Imagem a ser gerado o histograma
+     * @return Lista quantificada onde cada elemento do array é o tom e o valor é a quantidade
+     * de vezes que este tom se repete
+     */
+    public int[] GetGreenHistogram(BufferedImage image) {
+        int[] accTone = new int[256];
+
+        for (int y = 0; y < image.getHeight(); y++) {
+            for (int x = 0; x < image.getWidth(); x++) {
+                int pixelTone = ColorExtensions.Green(image.getRGB(x, y));
+                //Quantificando na escala de cores 255 quantas vezes este TON se repete
+                accTone[pixelTone] += 1;
+            }
+        }
+
+        return accTone;
+    }
+
+    /**
+     * Gera uma lista de 256 tons com quantificação de tons de Azul,
+     * contendo quantas vezes determinado tom na escala 255 se repete.
+     *
+     * @param image Imagem a ser gerado o histograma
+     * @return Lista quantificada onde cada elemento do array é o tom e o valor é a quantidade
+     * de vezes que este tom se repete
+     */
+    public int[] GetBlueHistogram(BufferedImage image) {
+        int[] accTone = new int[256];
+
+        for (int y = 0; y < image.getHeight(); y++) {
+            for (int x = 0; x < image.getWidth(); x++) {
+                int pixelTone = ColorExtensions.Blue(image.getRGB(x, y));
+                //Quantificando na escala de cores 255 quantas vezes este TON se repete
+                accTone[pixelTone] += 1;
+            }
+        }
+
+        return accTone;
+    }
+
+    /**
+     * Gera uma lista de 256 tons com quantificação de tons de BRILHO,
+     * contendo quantas vezes determinado tom na escala 255 se repete.
+     *
+     * @param image Imagem a ser gerado o histograma
+     * @return Lista quantificada onde cada elemento do array é o tom e o valor é a quantidade
+     * de vezes que este tom se repete
+     */
+    public int[] GetBrightnessHistogram(BufferedImage image) {
+        int[] accTone = new int[256];
+
+        for (int y = 0; y < image.getHeight(); y++) {
+            for (int x = 0; x < image.getWidth(); x++) {
+                int pixelTone = ColorExtensions.Brightness(image.getRGB(x, y));
+                //Quantificando na escala de cores 255 quantas vezes este TON se repete
+                accTone[pixelTone] += 1;
+            }
+        }
+
+        return accTone;
+    }
+
+    /**
+     * Gera uma lista de 256 tons com quantificação de tons de Saturação,
+     * contendo quantas vezes determinado tom na escala 255 se repete.
+     *
+     * @param image Imagem a ser gerado o histograma
+     * @return Lista quantificada onde cada elemento do array é o tom e o valor é a quantidade
+     * de vezes que este tom se repete
+     */
+    public int[] GetSaturationHistogram(BufferedImage image) {
+        int[] accTone = new int[256];
+
+        for (int y = 0; y < image.getHeight(); y++) {
+            for (int x = 0; x < image.getWidth(); x++) {
+                int pixelTone = ColorExtensions.Saturations(image.getRGB(x, y));
+                //Quantificando na escala de cores 255 quantas vezes este TON se repete
+                accTone[pixelTone] += 1;
+            }
+        }
+
+        return accTone;
+    }
+
+    /**
+     * Gera uma lista de 256 tons com quantificação de tons de HUE,
+     * contendo quantas vezes determinado tom na escala 255 se repete.
+     *
+     * @param image Imagem a ser gerado o histograma
+     * @return Lista quantificada onde cada elemento do array é o tom e o valor é a quantidade
+     * de vezes que este tom se repete
+     */
+    public int[] GetHueHistogram(BufferedImage image) {
+        int[] accTone = new int[256];
+
+        for (int y = 0; y < image.getHeight(); y++) {
+            for (int x = 0; x < image.getWidth(); x++) {
+                int pixelTone = ColorExtensions.Hue(image.getRGB(x, y));
+                //Quantificando na escala de cores 255 quantas vezes este TON se repete
+                accTone[pixelTone] += 1;
+            }
+        }
+
+        return accTone;
+    }
+
+    /**
+     * Gera uma lista de 256 tons com quantificação e Acumulação dos tons de Cinza,
+     * contendo a acumulação de determinado tom na escala 255
+     *
+     * @param image imagem origem
+     * @return Array de 255 elementos contendo o acumulo dos 255 tons de cinza da imagem origem
+     */
+    public int[] GetGrayHistogramAcc(BufferedImage image) {
+        int[] grayHistogram = GetGrayHistogram(image);
+        int[] grayHistogramAcc = GetHistogramAcc(grayHistogram);
+
+        return grayHistogramAcc;
+    }
+
+    /**
+     * Gera uma lista de 256 tons com quantificação e Acumulação dos tons de Vermelho,
+     * contendo a acumulação de determinado tom na escala 255
+     *
+     * @param image imagem origem
+     * @return Array de 255 elementos contendo o acumulo dos 255 tons de Vermelho da imagem origem
+     */
+    public int[] GetRedHistogramAcc(BufferedImage image) {
+        int[] histogram = GetRedHistogram(image);
+        int[] histogramAcc = GetHistogramAcc(histogram);
+
+        return histogram;
+    }
+
+    /**
+     * Gera uma lista de 256 tons com quantificação e Acumulação dos tons de Verde,
+     * contendo a acumulação de determinado tom na escala 255
+     *
+     * @param image imagem origem
+     * @return Array de 255 elementos contendo o acumulo dos 255 tons de Verde da imagem origem
+     */
+    public int[] GetGreenHistogramAcc(BufferedImage image) {
+        int[] histogram = GetGreenHistogram(image);
+        int[] histogramAcc = GetHistogramAcc(histogram);
+
+        return histogram;
+    }
+
+    /**
+     * Gera uma lista de 256 tons com quantificação e Acumulação dos tons de Azul,
+     * contendo a acumulação de determinado tom na escala 255
+     *
+     * @param image imagem origem
+     * @return Array de 255 elementos contendo o acumulo dos 255 tons de Azul da imagem origem
+     */
+    public int[] GetBlueHistogramAcc(BufferedImage image) {
+        int[] histogram = GetBlueHistogram(image);
+        int[] histogramAcc = GetHistogramAcc(histogram);
+
+        return histogram;
+    }
+
+    /**
+     * Gera uma lista de 256 tons com quantificação e Acumulação dos tons de Brilho,
+     * contendo a acumulação de determinado tom na escala 255
+     *
+     * @param image imagem origem
+     * @return Array de 255 elementos contendo o acumulo dos 255 tons de Brilho da imagem origem
+     */
+    public int[] GetBrightnessHistogramAcc(BufferedImage image) {
+        int[] histogram = GetBrightnessHistogram(image);
+        int[] histogramAcc = GetHistogramAcc(histogram);
+
+        return histogram;
+    }
+
+    /**
+     * Gera uma lista de 256 tons com quantificação e Acumulação dos tons de Saturação,
+     * contendo a acumulação de determinado tom na escala 255
+     *
+     * @param image imagem origem
+     * @return Array de 255 elementos contendo o acumulo dos 255 tons de Saturação da imagem origem
+     */
+    public int[] GetSaturationHistogramAcc(BufferedImage image) {
+        int[] histogram = GetSaturationHistogram(image);
+        int[] histogramAcc = GetHistogramAcc(histogram);
+
+        return histogram;
+    }
+
+    /**
+     * Gera uma lista de 256 tons com quantificação e Acumulação dos tons de HUE,
+     * contendo a acumulação de determinado tom na escala 255
+     *
+     * @param image imagem origem
+     * @return Array de 255 elementos contendo o acumulo dos 255 tons de HUE da imagem origem
+     */
+    public int[] GetHueHistogramAcc(BufferedImage image) {
+        int[] histogram = GetHueHistogram(image);
+        int[] histogramAcc = GetHistogramAcc(histogram);
+
+        return histogram;
+    }
+
+    /**
+     * Gera uma lista de tons de cinza acumulados e equalizados da escala de 256 da imagem origem.
+     *
+     * @param image imagem origem
+     * @return Array com 255 elementos representando os 255 tons da cor e a quantidade equalizada referente
+     * a cada tom de cinza.
+     */
+    public int[] GetGrayHistogramEqualized(BufferedImage image) {
+        int totalPixel = GetTotalPixel(image);
+        int[] histogram = GetGrayHistogram(image);
+
+        int[] equalized = GetEqualizedHistogram(histogram, totalPixel);
+
+        return equalized;
+    }
+
+    public int[] GetRedHistogramEqualized(BufferedImage image) {
+        int totalPixel = GetTotalPixel(image);
+        int[] histogram = GetRedHistogram(image);
+        int[] equalized = GetEqualizedHistogram(histogram, totalPixel);
+
+        return equalized;
+    }
+
+    public int[] GetGreenHistogramEqualized(BufferedImage image) {
+        int totalPixel = GetTotalPixel(image);
+        int[] histogram = GetGreenHistogram(image);
+        int[] equalized = GetEqualizedHistogram(histogram, totalPixel);
+
+        return equalized;
+    }
+
+    public int[] GetBlueHistogramEqualized(BufferedImage image) {
+        int totalPixel = GetTotalPixel(image);
+        int[] histogram = GetBlueHistogram(image);
+        int[] equalized = GetEqualizedHistogram(histogram, totalPixel);
+
+        return equalized;
+    }
+
+    public int[] GetBrightnessHistogramEqualized(BufferedImage image) {
+        int totalPixel = GetTotalPixel(image);
+        int[] histogram = GetBrightnessHistogram(image);
+        int[] equalized = GetEqualizedHistogram(histogram, totalPixel);
+
+        return equalized;
+    }
+
+    public int[] GetSaturationHistogramEqualized(BufferedImage image) {
+        int totalPixel = GetTotalPixel(image);
+        int[] histogram = GetSaturationHistogram(image);
+        int[] equalized = GetEqualizedHistogram(histogram, totalPixel);
+
+        return equalized;
+    }
+
+    public int[] GetHueHistogramEqualized(BufferedImage image) {
+        int totalPixel = GetTotalPixel(image);
+        int[] histogram = GetHueHistogram(image);
+        int[] equalized = GetEqualizedHistogram(histogram, totalPixel);
+
+        return equalized;
+    }
+
+    public int[] GetHistogram(BufferedImage image, BufferedImageEqualizeType equalizeType) {
+        {
+            int[] histogram = null;
+
+            switch (equalizeType) {
+                case GRAYSCALE:
+                    histogram = GetGrayHistogram(image);
+                    break;
+                case RED:
+                    histogram = GetRedHistogram(image);
+                    break;
+                case GREEN:
+                    histogram = GetGreenHistogram(image);
+                    break;
+                case BLUE:
+                    histogram = GetBlueHistogram(image);
+                    break;
+                case BRIGHTNESS:
+                    histogram = GetBrightnessHistogram(image);
+                    break;
+                case SATURATION:
+                    histogram = GetSaturationHistogram(image);
+                    break;
+                case HUE:
+                    histogram = GetHueHistogram(image);
+                    break;
+
+            }
+
+            return histogram;
+        }
+    }
+
+    public int[] GetHistogramAcc(BufferedImage image, BufferedImageEqualizeType equalizeType) {
+        int[] histogram = null;
+
+        switch (equalizeType) {
+            case GRAYSCALE:
+                histogram = GetGrayHistogramAcc(image);
+                break;
+            case RED:
+                histogram = GetRedHistogramAcc(image);
+                break;
+            case GREEN:
+                histogram = GetGreenHistogramAcc(image);
+                break;
+            case BLUE:
+                histogram = GetBlueHistogramAcc(image);
+                break;
+            case BRIGHTNESS:
+                histogram = GetBrightnessHistogramAcc(image);
+                break;
+            case SATURATION:
+                histogram = GetSaturationHistogramAcc(image);
+                break;
+            case HUE:
+                histogram = GetHueHistogramAcc(image);
+                break;
+
+        }
+
+        return histogram;
+    }
+
+    public int[] GetHistogramEqualized(BufferedImage image, BufferedImageEqualizeType equalizeType) {
+        int[] map = null;
+
+        switch (equalizeType) {
+            case GRAYSCALE:
+                map = GetGrayHistogramEqualized(image);
+                break;
+            case RED:
+                map = GetRedHistogramEqualized(image);
+                break;
+            case GREEN:
+                map = GetGreenHistogramEqualized(image);
+                break;
+            case BLUE:
+                map = GetBlueHistogramEqualized(image);
+                break;
+            case BRIGHTNESS:
+                map = GetBrightnessHistogramEqualized(image);
+                break;
+            case SATURATION:
+                map = GetSaturationHistogramEqualized(image);
+                break;
+            case HUE:
+                map = GetHueHistogramEqualized(image);
+                break;
+
+        }
+
+        return map;
+    }
+
+    public BufferedImage Equalize(BufferedImage image, BufferedImageEqualizeType equalizeType) {
+
+        BufferedImage equalizedImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+        int totalPixel = GetTotalPixel(image);
+
+        int[] map = GetHistogramEqualized(image, equalizeType);
+
+        for (int y = 0; y < image.getHeight(); y++) {
+            for (int x = 0; x < image.getWidth(); x++) {
+                Color color = new Color(image.getRGB(x, y));
+                Color equalizedColor = GetEqualizedHistogramColor(image, map, x, y, equalizeType);
+                equalizedImage.setRGB(x, y, equalizedColor.getRGB());
+            }
+        }
+
+        return equalizedImage;
+    }
+
+    public BufferedImage EqualizeHSV(BufferedImage image) {
+
+        BufferedImage equalizedImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+        int totalPixel = GetTotalPixel(image);
+
+        int[] mapSaturation = GetSaturationHistogramEqualized(image);
+        int[] mapBrightness = GetBrightnessHistogramEqualized(image);
+        int[] mapHue = GetHueHistogramEqualized(image);
+
+        for (int y = 0; y < image.getHeight(); y++) {
+            for (int x = 0; x < image.getWidth(); x++) {
+                Color color = new Color(image.getRGB(x, y));
+                Color SEC = GetEqualizedHistogramColor(image, mapSaturation, x, y, BufferedImageEqualizeType.SATURATION);
+                Color VEC = GetEqualizedHistogramColor(image, mapBrightness, x, y, BufferedImageEqualizeType.BRIGHTNESS);
+                Color HEC = GetEqualizedHistogramColor(image, mapBrightness, x, y, BufferedImageEqualizeType.HUE);
+                Color equalizedColor = new Color(HEC.getRed(), SEC.getGreen(), VEC.getBlue());
+                equalizedImage.setRGB(x, y, equalizedColor.getRGB());
+            }
+        }
+
+        return equalizedImage;
+    }
+
+    public BufferedImage EqualizeRGB(BufferedImage image) {
+
+        BufferedImage equalizedImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+        int totalPixel = GetTotalPixel(image);
+
+        int[] mapRed = GetRedHistogramEqualized(image);
+        int[] mapGreen = GetGreenHistogramEqualized(image);
+        int[] mapBlue = GetBlueHistogramEqualized(image);
+
+        for (int y = 0; y < image.getHeight(); y++) {
+            for (int x = 0; x < image.getWidth(); x++) {
+                Color color = new Color(image.getRGB(x, y));
+                Color REC = GetEqualizedHistogramColor(image, mapRed, x, y, BufferedImageEqualizeType.SATURATION);
+                Color GEC = GetEqualizedHistogramColor(image, mapGreen, x, y, BufferedImageEqualizeType.BRIGHTNESS);
+                Color BEC = GetEqualizedHistogramColor(image, mapBlue, x, y, BufferedImageEqualizeType.HUE);
+                Color equalizedColor = new Color(REC.getRed(), GEC.getGreen(), BEC.getBlue());
+                equalizedImage.setRGB(x, y, equalizedColor.getRGB());
+            }
+        }
+
+        return equalizedImage;
+    }
+
+    public Color GetEqualizedHistogramColor(BufferedImage image, int[] map, int x, int y, BufferedImageEqualizeType equalizeType) {
+        Color color = new Color(image.getRGB(x, y));
+        int tone = 0;
+
+        switch (equalizeType) {
+            case GRAYSCALE:
+                tone = map[ColorExtensions.GetGrayTone(color)];
+                break;
+            case RED:
+                tone = map[color.getRed()];
+                break;
+            case GREEN:
+                tone = map[color.getGreen()];
+                break;
+            case BLUE:
+                tone = map[color.getBlue()];
+                break;
+            case BRIGHTNESS:
+                tone = map[ColorExtensions.Brightness(image.getRGB(x, y))];
+                break;
+            case SATURATION:
+                tone = map[ColorExtensions.Saturations(image.getRGB(x, y))];
+                break;
+            case HUE:
+                tone = map[ColorExtensions.Hue(image.getRGB(x, y))];
+                break;
+        }
+
+        Color newColor = new Color(tone, tone, tone);
+
+        return newColor;
+    }
+
+    public BufferedImage ChangeRedColor(BufferedImage image, int redColor) {
+        BufferedImage changedColorImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+
+        for (int y = 0; y < image.getHeight(); y++) {
+            for (int x = 0; x < image.getWidth(); x++) {
+                Color pixelColor = new Color(image.getRGB(x, y));
+                Color newColor = new Color(redColor, pixelColor.getGreen(), pixelColor.getBlue());
+                changedColorImage.setRGB(x, y, newColor.getRGB());
+            }
+        }
+
+        return changedColorImage;
+    }
+
+    public BufferedImage ChangGreenColor(BufferedImage image, int greenColor) {
+        BufferedImage changedColorImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+
+        for (int y = 0; y < image.getHeight(); y++) {
+            for (int x = 0; x < image.getWidth(); x++) {
+                Color pixelColor = new Color(image.getRGB(x, y));
+                Color newColor = new Color(greenColor, pixelColor.getGreen(), pixelColor.getBlue());
+                changedColorImage.setRGB(x, y, newColor.getRGB());
+            }
+        }
+
+        return changedColorImage;
+    }
+
+    public BufferedImage ChangeBlueColor(BufferedImage image, int blueColor) {
+        BufferedImage changedColorImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+
+        for (int y = 0; y < image.getHeight(); y++) {
+            for (int x = 0; x < image.getWidth(); x++) {
+                Color pixelColor = new Color(image.getRGB(x, y));
+                Color newColor = new Color(blueColor, pixelColor.getGreen(), pixelColor.getBlue());
+                changedColorImage.setRGB(x, y, newColor.getRGB());
+            }
+        }
+
+        return changedColorImage;
+    }
+
+    public BufferedImage ChangeColor(BufferedImage image, Color color) {
+        BufferedImage changedColorImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+
+        for (int y = 0; y < image.getHeight(); y++) {
+            for (int x = 0; x < image.getWidth(); x++) {
+                changedColorImage.setRGB(x, y, color.getRGB());
+            }
+        }
+
+        return changedColorImage;
+    }
+
+
+    /**
+     * Gera o histograma acumulado apartir do histograma quantitativo
+     *
+     * @param histogram Histograma quantitativo contendo quantas vezes um tom da escala de 255
+     *                  se repete na imagem
+     * @return
+     */
+    public int[] GetHistogramAcc(int[] histogram) {
+        int[] acc = new int[256];
+        acc[0] = histogram[0];
+
+        for (int a = 1; a < histogram.length; a++) {
+            acc[a] += histogram[a] + acc[a - 1];
+        }
+        return acc;
+    }
+
+    /**
+     * Gera lista de 255 tons equalizados apartir de um histograma quantitativo.
+     *
+     * @param histogram   Histograma quantitativo e não Acumulativo a ser utilizado na equalização.
+     *                    Tenha em mente que a acumulação sera feita automaticamente por este metodo sendo
+     *                    retornado nova lista contendo tons acumulados e equalizados.
+     * @param totalPixels Total de pixels da imagem a ser gerado o histograma equalizado
+     * @return retornado nova lista contendo tons acumulados e equalizados.
+     */
+    public int[] GetEqualizedHistogram(int[] histogram, int totalPixels) {
+
+        int[] equalized = new int[256];
+
+        //Hitograma acumulado (ha)
+        int[] ha = GetHistogramAcc(histogram);
+
+        //Quantidade de pixel no primeiro tom de cinza.
+        //Esse é o ponto onde os níveis de cinza começam a existir.
+        float hMin = ArrayExtensions.GetFirsNonZero(histogram);
+
+        for (int i = 0; i < 256; i++) {
+            equalized[i] = Math.round(((ha[i] - hMin) / (totalPixels - hMin)) * 255);
+        }
+        return equalized;
+    }
+
+    public int GetTotalPixel(BufferedImage image) {
+        return image.getWidth() * image.getHeight();
+    }
+
+    public BufferedImage HistogramGraphic2D(int[] histogram, int width, int height, int ruleScale) {
+
+        //Plano de fundo para o grafico
+        BufferedImage gImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        gImage = ChangeColor(gImage, Color.WHITE);
+
+        //Criando grafico
+        Graphics2D graphics = gImage.createGraphics();
+
+        //Criando fonte
+        Font font = new Font("Arial", 0, 9);
+        graphics.setFont(font);
+        graphics.setPaint(Color.black);
+        //FontMetrics fontMetrics = graphics.getFontMetrics();
+
+        //Desenhando regua
+        BufferedImageRect rect = new BufferedImageRect(gImage);
+        rect.setPosition(0, 0);
+        rect.setOffSet(50, 50, -100, -100);
+        rect.drawGraphic2D(graphics);
+
+        //Inner padding para desenhar o grafico dentro da borda
+        BufferedImageRect padding = new BufferedImageRect(gImage);
+        padding.setPosition(0, 0);
+        padding.setOffSet(80, 80, -160, -160);
+
+        //Maior valor do histograma, usado para limitar o grafico no topo
+        int mostValue = ArrayExtensions.GetMaxValue(histogram);
+
+        //Draw Rule Scale
+        graphics.drawString("Rule Scale by: " + ruleScale, rect.getRight() / 2, rect.getY() - 20);
+
+        //Draw Bottom Rule
+        for (int a = 0; a <= ruleScale; a++) {
+            String message = ((256 * 10 / ruleScale * 10) * a) / 100 + "";
+            int eachXByScale = padding.getWidht() / ruleScale;
+            graphics.drawString(message, padding.getX() + (eachXByScale * a), padding.getBottom() + 50);
+        }
+
+        //Draw Left Rule
+        for (int a = 0; a <= ruleScale; a++) {
+            String message = ((mostValue * 10 / ruleScale * 10) * a) / 100 + "";
+            int eachYByScale = padding.getHeight() / ruleScale;
+            graphics.drawString(message, rect.getX() - 35, padding.getBottom() - (eachYByScale * a));
+        }
+
+        //Draw Line Histogram Values
+        for (int a = 0; a < 256; a++) {
+
+            //Horizontal
+            float eachX = (float) padding.getWidht() / 256;
+            int px = padding.getX() + (int) (a * eachX);
+
+            //Vertical
+            float eachY = (float) padding.getHeight() / mostValue;
+            int py = padding.getBottom() - (int) ((float) histogram[a] * eachY);
+
+            graphics.drawLine(px, padding.getBottom(), px, py);
+        }
+
+        return gImage;
 
     }
-    public int[] GetHistogramAcc(BufferedImage img)
-    {
 
+    public BufferedImage LoadImage(String filePath) throws IOException {
+        return ImageIO.read(new File(filePath));
+    }
+    public boolean SaveImage(BufferedImage image, String extensions, String filePath) throws IOException {
+
+        return ImageIO.write(image,extensions, new File(filePath));
     }
 
 }
