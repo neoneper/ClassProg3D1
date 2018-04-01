@@ -59,6 +59,10 @@ public class ColorExtensions {
 
         return new Color(r, g, b);
     }
+    public static Color HexToColor(String hexcolor)
+    {
+        return Color.decode(hexcolor);
+    }
 
     /**
      * Utilizando uma cor de referência, este método procura em uma lista de cores Hexadecimais

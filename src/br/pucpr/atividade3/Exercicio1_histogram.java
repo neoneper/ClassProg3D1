@@ -16,6 +16,7 @@ import java.io.IOException;
 public class Exercicio1_histogram
 {
     public static void main(String[] args) throws IOException {
+
         //Inicializando objeto que me permite trabalhar com convolução, histogramas e efeitos
         BufferedImageOperation imageOperation = new BufferedImageOperation();
         //Carregando imagem para gerar seu histograma
@@ -30,6 +31,8 @@ public class Exercicio1_histogram
 
         BufferedImage histoNormal = imageOperation.HistogramGraphic2D(histogramNormalized,512,600,6);
         imageOperation.SaveImage(histoNormal,"jpg","graphicNormalized.jpg");
+
+
     }
 
 }

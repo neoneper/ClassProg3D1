@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38c28350-56d6-426d-88aa-de2a7ce762da" name="Default" comment="" />
+    <list default="true" id="38c28350-56d6-426d-88aa-de2a7ce762da" name="Default" comment="BUG">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/br/pucpr/Extensions/SimplexNoise.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/br/pucpr/Extensions/Utils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/br/pucpr/atividade3/Labs_Experience.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/br/pucpr/tde1/TDE1_PerlinNoise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ClassProg3D1/br/pucpr/Extensions/BufferedImageOperation$1.class" afterPath="$PROJECT_DIR$/out/production/ClassProg3D1/br/pucpr/Extensions/BufferedImageOperation$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ClassProg3D1/br/pucpr/Extensions/BufferedImageOperation.class" afterPath="$PROJECT_DIR$/out/production/ClassProg3D1/br/pucpr/Extensions/BufferedImageOperation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ClassProg3D1/br/pucpr/Extensions/ColorExtensions.class" afterPath="$PROJECT_DIR$/out/production/ClassProg3D1/br/pucpr/Extensions/ColorExtensions.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/pucpr/Extensions/ColorExtensions.java" afterPath="$PROJECT_DIR$/src/br/pucpr/Extensions/ColorExtensions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/pucpr/atividade3/Exercicio1_histogram.java" afterPath="$PROJECT_DIR$/src/br/pucpr/atividade3/Exercicio1_histogram.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +27,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Atividade2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade2/Atividade2.java">
+      <file leaf-file-name="TDE1_PerlinNoise.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/pucpr/tde1/TDE1_PerlinNoise.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+            <state relative-caret-position="216">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -28,100 +39,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Atividade3_Histograma.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade3/Atividade3_Histograma.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BufferedImageOperation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2074">
-              <caret line="301" column="0" lean-forward="false" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Convolve#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#Convolve#1;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#Pixelate#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#HSV#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#HUE#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#SATURATION#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#BRIGHTNESS#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#ChangeColorPallet#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetKernelPixelColor#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#CombineToBorder#0;class#BufferedImageOperation#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ColorExtensions.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ColorExtensions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/ColorExtensions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="254" column="0" lean-forward="false" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+            <state relative-caret-position="138">
+              <caret line="63" column="22" lean-forward="false" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Distance#0;class#ColorExtensions#0" expanded="false" />
                 <element signature="method#Distance#1;class#ColorExtensions#0" expanded="false" />
                 <element signature="method#HexToColor#0;class#ColorExtensions#0" expanded="false" />
+                <element signature="e#1928#1929#0" expanded="true" />
+                <element signature="e#1973#1974#0" expanded="true" />
                 <element signature="method#ColorNear#0;class#ColorExtensions#0" expanded="false" />
-                <element signature="method#RGBHex#0;class#ColorExtensions#0" expanded="false" />
-                <element signature="method#RGBHexMinMax#0;class#ColorExtensions#0" expanded="false" />
-                <element signature="method#RGBHexMinMax#1;class#ColorExtensions#0" expanded="false" />
-                <element signature="method#ColorMinMax#0;class#ColorExtensions#0" expanded="false" />
-                <element signature="method#ColorMinMax#1;class#ColorExtensions#0" expanded="false" />
-                <element signature="method#PixelMinMax#0;class#ColorExtensions#0" expanded="false" />
-                <element signature="method#CombinePrewitt#0;class#ColorExtensions#0" expanded="false" />
-                <element signature="method#CombineSobel#0;class#ColorExtensions#0" expanded="false" />
-                <element signature="method#ColorHSB#0;class#ColorExtensions#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Exercicio1_Blur.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade2/Exercicio1_Blur.java">
+      <file leaf-file-name="SimplexNoise.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/SimplexNoise.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="284">
+              <caret line="131" column="77" lean-forward="false" selection-start-line="131" selection-start-column="77" selection-end-line="131" selection-end-column="77" />
+              <folding>
+                <element signature="method#noise#0;class#SimplexNoise#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Exercicio1_Enbos.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade2/Exercicio1_Enbos.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BufferedImageOperationType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperationType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BufferedImageOperationKernel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperationKernel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-              <folding />
-            </state>
+      <file leaf-file-name="simplesNoise.jpg" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/simplesNoise.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -138,6 +89,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>kernel_centerY</find>
+      <find>simplex</find>
+      <find>p</find>
+      <find>perm</find>
+      <find>HexToColor</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,7 +130,12 @@
         <option value="$PROJECT_DIR$/src/br/pucpr/atividade2/Exercicio1_Enbos.java" />
         <option value="$PROJECT_DIR$/src/br/pucpr/atividade3/Atividade3_Histograma.java" />
         <option value="$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperation.java" />
+        <option value="$PROJECT_DIR$/src/br/pucpr/atividade3/Exercicio1_histogram.java" />
+        <option value="$PROJECT_DIR$/src/br/pucpr/atividade3/Labs_Experience.java" />
+        <option value="$PROJECT_DIR$/src/br/pucpr/Extensions/Utils.java" />
+        <option value="$PROJECT_DIR$/src/br/pucpr/Extensions/SimplexNoise.java" />
         <option value="$PROJECT_DIR$/src/br/pucpr/Extensions/ColorExtensions.java" />
+        <option value="$PROJECT_DIR$/src/br/pucpr/tde1/TDE1_PerlinNoise.java" />
       </list>
     </option>
   </component>
@@ -201,6 +161,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -210,6 +172,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ClassProg3D1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassProg3D1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassProg3D1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pucpr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tde1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassProg3D1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClassProg3D1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pucpr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Extensions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -255,13 +261,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.pucpr.atividade3" />
       <recent name="br.pucpr.atividade2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -283,7 +288,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Exercicio1_Enbos">
+  <component name="RunManager" selected="Application.TDE1_PerlinNoise">
     <configuration default="false" name="Atividade1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -332,6 +337,46 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="br.pucpr.atividade2.Exercicio1_Enbos" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ClassProg3D1" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Labs_Experience" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="br.pucpr.atividade3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="br.pucpr.atividade3.Labs_Experience" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ClassProg3D1" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TDE1_PerlinNoise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="br.pucpr.tde1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="br.pucpr.tde1.TDE1_PerlinNoise" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -548,16 +593,20 @@
       <listeners />
       <method />
     </configuration>
-    <list size="3">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Atividade1" />
       <item index="1" class="java.lang.String" itemvalue="Application.Atividade2" />
       <item index="2" class="java.lang.String" itemvalue="Application.Exercicio1_Enbos" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Labs_Experience" />
+      <item index="4" class="java.lang.String" itemvalue="Application.TDE1_PerlinNoise" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.Exercicio1_Enbos" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Atividade2" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Atividade1" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.TDE1_PerlinNoise" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Labs_Experience" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Exercicio1_Enbos" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Atividade2" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Atividade1" />
       </list>
     </recent_temporary>
   </component>
@@ -649,35 +698,35 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.50292826" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22670807" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22670807" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.49707174" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32430455" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24011713" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39906833" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
@@ -700,7 +749,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/br/pucpr/tde1/TDE1_PerlinNoise.java</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -709,170 +766,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade3/Atividade3_Histograma.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="301" column="0" lean-forward="true" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Convolve#0;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#Convolve#1;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#Pixelate#0;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#HSV#0;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#HUE#0;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#SATURATION#0;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#BRIGHTNESS#0;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#ChangeColorPallet#0;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#GetKernelPixelColor#0;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#CombineToBorder#0;class#BufferedImageOperation#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/ColorExtensions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Distance#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#Distance#1;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#HexToColor#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#ColorNear#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#RGBHex#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#RGBHexMinMax#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#RGBHexMinMax#1;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#ColorMinMax#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#ColorMinMax#1;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#PixelMinMax#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#CombinePrewitt#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#CombineSobel#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#ColorHSB#0;class#ColorExtensions#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade2/Exercicio1_Blur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade2/Exercicio1_Enbos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperationType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperationKernel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade2/Atividade2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade2/Exercicio1_Blur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade2/Exercicio1_Enbos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperationType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperationKernel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/aula1/InvertBufferImage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="101" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade1/Atividade1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/awt/image/BufferedImage.java" />
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/ColorExtensions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Distance#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#Distance#1;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#HexToColor#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#ColorNear#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#RGBHex#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#RGBHexMinMax#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#RGBHexMinMax#1;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#ColorMinMax#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#ColorMinMax#1;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#PixelMinMax#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#CombinePrewitt#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#CombineSobel#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#ColorHSB#0;class#ColorExtensions#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pyppy2.jpg" />
     <entry file="file://$PROJECT_DIR$/src/br/pucpr/aula1/InvertBufferImage.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -947,7 +840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -955,6 +847,63 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade2/Atividade2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade3/Atividade3_Histograma.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="48" column="76" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="48" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade3/Exercicio2_histogramGraphic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="43" column="66" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="43" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperationType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out_hsv.jpg" />
+    <entry file="file://$PROJECT_DIR$/out_rgb.jpg" />
+    <entry file="file://$PROJECT_DIR$/out_sat.jpg" />
+    <entry file="file://$PROJECT_DIR$/car-wallpapers19.jpg" />
+    <entry file="file://$PROJECT_DIR$/out_brit.jpg" />
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade3/Labs_Experience.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade3/Desafio4_ColorHistograma.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="38" column="72" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="38" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageEqualizeType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -967,73 +916,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperationType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade2/Atividade2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade3/Atividade3_Histograma.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="301" column="0" lean-forward="false" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
+        <state relative-caret-position="10438">
+          <caret line="727" column="36" lean-forward="false" selection-start-line="727" selection-start-column="25" selection-end-line="727" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Convolve#0;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#Convolve#1;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#Pixelate#0;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#HSV#0;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#HUE#0;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#SATURATION#0;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#BRIGHTNESS#0;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#ChangeColorPallet#0;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#GetKernelPixelColor#0;class#BufferedImageOperation#0" expanded="false" />
-            <element signature="method#CombineToBorder#0;class#BufferedImageOperation#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#GetHistogram#0;class#BufferedImageOperation#0" expanded="false" />
+            <element signature="method#GetHistogramAcc#0;class#BufferedImageOperation#0" expanded="false" />
+            <element signature="method#GetHistogramEqualized#0;class#BufferedImageOperation#0" expanded="false" />
+            <element signature="method#Equalize#0;class#BufferedImageOperation#0" expanded="false" />
+            <element signature="method#EqualizeHSV#0;class#BufferedImageOperation#0" expanded="false" />
+            <element signature="method#EqualizeRGB#0;class#BufferedImageOperation#0" expanded="false" />
+            <element signature="method#GetEqualizedHistogramColor#0;class#BufferedImageOperation#0" expanded="false" />
+            <element signature="method#ChangeRedColor#0;class#BufferedImageOperation#0" expanded="false" />
+            <element signature="method#ChangGreenColor#0;class#BufferedImageOperation#0" expanded="false" />
+            <element signature="method#ChangeBlueColor#0;class#BufferedImageOperation#0" expanded="false" />
+            <element signature="method#ChangeColor#0;class#BufferedImageOperation#0" expanded="false" />
+            <element signature="e#34937#34938#0" expanded="false" />
+            <element signature="e#34996#34997#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageRect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/tde1.java" />
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade3/Exercicio1_histogram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="32" selection-end-column="76" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/ColorExtensions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="254" column="0" lean-forward="false" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+        <state relative-caret-position="138">
+          <caret line="63" column="22" lean-forward="false" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Distance#0;class#ColorExtensions#0" expanded="false" />
             <element signature="method#Distance#1;class#ColorExtensions#0" expanded="false" />
             <element signature="method#HexToColor#0;class#ColorExtensions#0" expanded="false" />
+            <element signature="e#1928#1929#0" expanded="true" />
+            <element signature="e#1973#1974#0" expanded="true" />
             <element signature="method#ColorNear#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#RGBHex#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#RGBHexMinMax#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#RGBHexMinMax#1;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#ColorMinMax#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#ColorMinMax#1;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#PixelMinMax#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#CombinePrewitt#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#CombineSobel#0;class#ColorExtensions#0" expanded="false" />
-            <element signature="method#ColorHSB#0;class#ColorExtensions#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/SimplexNoise.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="131" column="77" lean-forward="false" selection-start-line="131" selection-start-column="77" selection-end-line="131" selection-end-column="77" />
+          <folding>
+            <element signature="method#noise#0;class#SimplexNoise#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/tde1/TDE1_PerlinNoise.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simplesNoise.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
