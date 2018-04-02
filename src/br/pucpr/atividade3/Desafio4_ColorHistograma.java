@@ -31,12 +31,14 @@ public class Desafio4_ColorHistograma {
         //Experiência equalizando HSV e RGB
         BufferedImage out_lara_rgb = imageOperation.EqualizeRGB(lara);
         BufferedImage out_lara_hsv = imageOperation.EqualizeHSV(lara);
+        BufferedImage out_lara_sv = imageOperation.EqualizeSV(lara);
 
         //Salvando imagens equalizadas
         imageOperation.SaveImage(out_lara_brit,"jpg","out_lara_brit.jpg");
         imageOperation.SaveImage(out_lara_sat,"jpg","out_lara_sat.jpg");
         imageOperation.SaveImage(out_lara_rgb,"jpg","out_lara_rgb.jpg");
         imageOperation.SaveImage(out_lara_hsv,"jpg","out_lara_hsv.jpg");
+        imageOperation.SaveImage(out_lara_sv,"jpg","out_lara_sv2.jpg");
     }
 
 }

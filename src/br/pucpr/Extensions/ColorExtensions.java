@@ -59,8 +59,8 @@ public class ColorExtensions {
 
         return new Color(r, g, b);
     }
-    public static Color HexToColor(String hexcolor)
-    {
+
+    public static Color HexToColor(String hexcolor) {
         return Color.decode(hexcolor);
     }
 
@@ -123,30 +123,29 @@ public class ColorExtensions {
         return color.getBlue();
     }
 
-    public static int Brightness(int HexRGBColor) {
+    public static int Brightness255(int HexRGBColor) {
         Color color = new Color(HexRGBColor);
 
-        float[] hsb = new float[3];
-        Color.RGBtoHSB(color.getRed(), color.getGreen(), color.getBlue(), hsb);
-        return  (int)(hsb[2] * 255);
+        float[] hsb = Color.RGBtoHSB(color.getRed(), color.getGreen(), color.getBlue(), null);
+        return (int) (hsb[2] * 255);
 
     }
 
-    public static int Saturations(int HexRGBColor) {
+    public static int Saturations255(int HexRGBColor) {
         Color color = new Color(HexRGBColor);
 
-        float[] hsb = new float[3];
-        Color.RGBtoHSB(color.getRed(), color.getGreen(), color.getBlue(), hsb);
-        return  (int)(hsb[1] * 255);
+        float[] hsb = Color.RGBtoHSB(color.getRed(), color.getGreen(), color.getBlue(), null);
+        return (int)(hsb[1] * 255);
 
     }
 
-    public static int Hue(int HexRGBColor) {
+    public static int Hue255(int HexRGBColor) {
         Color color = new Color(HexRGBColor);
         float[] hsb = Color.RGBtoHSB(color.getRed(), color.getGreen(), color.getBlue(), null);
 
         return (int) hsb[0] * 255;
     }
+
 
     /**
      * Converte os canais manuais de Rgb do parametro em um RGB Hexadecimal, respeitando os valores
@@ -278,7 +277,7 @@ public class ColorExtensions {
     }
 
     /**
-     * Permite manipular os canais Hue, Saturation e Brightness de um objeto do tipo Color, gerando um novo
+     * Permite manipular os canais Hue255, Saturation e Brightness255 de um objeto do tipo Color, gerando um novo
      * Objeto Color modificado.
      * Tenha em mente que os valores HSB serão relativos aos valores ja existentes na cor origem.
      *
@@ -290,6 +289,7 @@ public class ColorExtensions {
      */
     public static Color ColorHSB(Color color, float hue, float saturation, float brightness) {
 
+
         float[] hsb = Color.RGBtoHSB(color.getRed(), color.getGreen(), color.getBlue(), null);
 
         float pixelHue = hsb[0] + hue > 1.0f ? 1.0f : hsb[0] + hue < 0.0f ? 0 : hsb[0] + hue;
@@ -297,6 +297,14 @@ public class ColorExtensions {
         float pixelBright = hsb[2] + brightness > 1.0f ? 1.0f : hsb[2] + brightness < 0.0f ? 0 : hsb[2] + brightness;
 
         return new Color(Color.HSBtoRGB(pixelHue, pixelSaturation, pixelBright));
+    }
+
+    public static float[] ColorHSB(Color color) {
+
+
+        float[] hsb = Color.RGBtoHSB(color.getRed(), color.getGreen(), color.getBlue(), null);
+
+        return hsb;
     }
 
     /**

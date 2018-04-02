@@ -5,10 +5,6 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.IntSummaryStatistics;
-import java.util.List;
 
 
 /**
@@ -144,11 +140,11 @@ public class BufferedImageOperation {
     }
 
     /**
-     * Modifica os valores de Hue, Saturation e Brightness da Imagem. Os valores de HSV podem variar de
+     * Modifica os valores de Hue255, Saturation e Brightness255 da Imagem. Os valores de HSV podem variar de
      * -1 a 1 sendo o valor zero o atual HSV da imagem.
      *
      * @param img        Imagem origem
-     * @param hue        HUE -1 a 1 sendo 0 o Hue atual da imagem
+     * @param hue        HUE -1 a 1 sendo 0 o Hue255 atual da imagem
      * @param saturation Saturação -1 a 1 sendo 0 a saturação atual da imagem
      * @param brightness Brilho -1 a 1 sendo 0 o Brilho atual da imagem
      * @return Retorna imagem com os valores HSV modificados.
@@ -168,12 +164,12 @@ public class BufferedImageOperation {
     }
 
     /**
-     * Modifica os valores de Hue da Imagem. Os valores de HUE podem variar de
+     * Modifica os valores de Hue255 da Imagem. Os valores de HUE podem variar de
      * -1 a 1 sendo o valor zero o atual HUE da imagem.
      *
      * @param img imagem de origem
-     * @param hue HUE -1 a 1 sendo 0 o Hue atual da imagem
-     * @return Imagem com Hue Modificado
+     * @param hue HUE -1 a 1 sendo 0 o Hue255 atual da imagem
+     * @return Imagem com Hue255 Modificado
      */
     public BufferedImage HUE(BufferedImage img, float hue) {
 
@@ -198,7 +194,7 @@ public class BufferedImageOperation {
      * -1 a 1 sendo o valor zero o atual brightness da imagem.
      *
      * @param img        imagem de origem
-     * @param brightness brightness -1 a 1 sendo 0 o Hue atual da imagem
+     * @param brightness brightness -1 a 1 sendo 0 o Hue255 atual da imagem
      * @return Imagem com brightness Modificado
      */
     public BufferedImage BRIGHTNESS(BufferedImage img, float brightness) {
@@ -397,7 +393,7 @@ public class BufferedImageOperation {
 
         for (int y = 0; y < image.getHeight(); y++) {
             for (int x = 0; x < image.getWidth(); x++) {
-                int pixelTone = ColorExtensions.Brightness(image.getRGB(x, y));
+                int pixelTone = ColorExtensions.Brightness255(image.getRGB(x, y));
                 //Quantificando na escala de cores 255 quantas vezes este TON se repete
                 accTone[pixelTone] += 1;
             }
@@ -419,7 +415,7 @@ public class BufferedImageOperation {
 
         for (int y = 0; y < image.getHeight(); y++) {
             for (int x = 0; x < image.getWidth(); x++) {
-                int pixelTone = ColorExtensions.Saturations(image.getRGB(x, y));
+                int pixelTone = ColorExtensions.Saturations255(image.getRGB(x, y));
                 //Quantificando na escala de cores 255 quantas vezes este TON se repete
                 accTone[pixelTone] += 1;
             }
@@ -441,7 +437,7 @@ public class BufferedImageOperation {
 
         for (int y = 0; y < image.getHeight(); y++) {
             for (int x = 0; x < image.getWidth(); x++) {
-                int pixelTone = ColorExtensions.Hue(image.getRGB(x, y));
+                int pixelTone = ColorExtensions.Hue255(image.getRGB(x, y));
                 //Quantificando na escala de cores 255 quantas vezes este TON se repete
                 accTone[pixelTone] += 1;
             }
@@ -718,6 +714,7 @@ public class BufferedImageOperation {
             for (int x = 0; x < image.getWidth(); x++) {
                 Color color = new Color(image.getRGB(x, y));
                 Color equalizedColor = GetEqualizedHistogramColor(image, map, x, y, equalizeType);
+
                 equalizedImage.setRGB(x, y, equalizedColor.getRGB());
             }
         }
@@ -728,23 +725,44 @@ public class BufferedImageOperation {
     public BufferedImage EqualizeHSV(BufferedImage image) {
 
         BufferedImage equalizedImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
-        int totalPixel = GetTotalPixel(image);
-
         int[] mapSaturation = GetSaturationHistogramEqualized(image);
         int[] mapBrightness = GetBrightnessHistogramEqualized(image);
         int[] mapHue = GetHueHistogramEqualized(image);
 
-        for (int y = 0; y < image.getHeight(); y++) {
-            for (int x = 0; x < image.getWidth(); x++) {
-                Color color = new Color(image.getRGB(x, y));
-                Color SEC = GetEqualizedHistogramColor(image, mapSaturation, x, y, BufferedImageEqualizeType.SATURATION);
-                Color VEC = GetEqualizedHistogramColor(image, mapBrightness, x, y, BufferedImageEqualizeType.BRIGHTNESS);
-                Color HEC = GetEqualizedHistogramColor(image, mapBrightness, x, y, BufferedImageEqualizeType.HUE);
-                Color equalizedColor = new Color(HEC.getRed(), SEC.getGreen(), VEC.getBlue());
-                equalizedImage.setRGB(x, y, equalizedColor.getRGB());
+        for (int y = 0; y < image.getHeight(); y++)
+        {
+            for (int x = 0; x < image.getWidth(); x++)
+            {
+                float eBrightness = (float)(mapBrightness[ColorExtensions.Brightness255(image.getRGB(x, y))]/255);
+                float eSaturation = (float)(mapSaturation[ColorExtensions.Saturations255(image.getRGB(x, y))]/255);
+                float eHue = (float)(mapSaturation[ColorExtensions.Hue255(image.getRGB(x, y))]/255);
+
+                Color newColor = new Color(Color.HSBtoRGB(eHue,eSaturation,eBrightness));
+                equalizedImage.setRGB(x,y, newColor.getRGB());
             }
         }
+        return equalizedImage;
+    }
+    public BufferedImage EqualizeSV(BufferedImage image) {
 
+        BufferedImage equalizedImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+        int[] mapSaturation = GetSaturationHistogramEqualized(image);
+        int[] mapBrightness = GetBrightnessHistogramEqualized(image);
+
+        for (int y = 0; y < image.getHeight(); y++)
+        {
+            for (int x = 0; x < image.getWidth(); x++)
+            {
+                Color color = new Color(image.getRGB(x, y));
+                float hsv[] = color.RGBtoHSB(color.getRed(),color.getGreen(),color.getBlue(),null);
+
+                float eBrightness = (float)(mapBrightness[ColorExtensions.Brightness255(image.getRGB(x, y))]/255);
+                float eSaturation = (float)(mapSaturation[ColorExtensions.Saturations255(image.getRGB(x, y))]/255);
+
+                Color newColor = new Color(Color.HSBtoRGB(hsv[0],eSaturation,eBrightness));
+                equalizedImage.setRGB(x,y, newColor.getRGB());
+            }
+        }
         return equalizedImage;
     }
 
@@ -760,9 +778,9 @@ public class BufferedImageOperation {
         for (int y = 0; y < image.getHeight(); y++) {
             for (int x = 0; x < image.getWidth(); x++) {
                 Color color = new Color(image.getRGB(x, y));
-                Color REC = GetEqualizedHistogramColor(image, mapRed, x, y, BufferedImageEqualizeType.SATURATION);
-                Color GEC = GetEqualizedHistogramColor(image, mapGreen, x, y, BufferedImageEqualizeType.BRIGHTNESS);
-                Color BEC = GetEqualizedHistogramColor(image, mapBlue, x, y, BufferedImageEqualizeType.HUE);
+                Color REC = GetEqualizedHistogramColor(image, mapRed, x, y, BufferedImageEqualizeType.RED);
+                Color GEC = GetEqualizedHistogramColor(image, mapGreen, x, y, BufferedImageEqualizeType.GREEN);
+                Color BEC = GetEqualizedHistogramColor(image, mapBlue, x, y, BufferedImageEqualizeType.BLUE);
                 Color equalizedColor = new Color(REC.getRed(), GEC.getGreen(), BEC.getBlue());
                 equalizedImage.setRGB(x, y, equalizedColor.getRGB());
             }
@@ -772,34 +790,50 @@ public class BufferedImageOperation {
     }
 
     public Color GetEqualizedHistogramColor(BufferedImage image, int[] map, int x, int y, BufferedImageEqualizeType equalizeType) {
+
         Color color = new Color(image.getRGB(x, y));
-        int tone = 0;
+        float hsv[] = color.RGBtoHSB(color.getRed(),color.getGreen(),color.getBlue(),null);
+
+        float equalizedTone = 0;
+
+        Color newColor= null;
 
         switch (equalizeType) {
             case GRAYSCALE:
-                tone = map[ColorExtensions.GetGrayTone(color)];
+                equalizedTone = map[ColorExtensions.GetGrayTone(color)];
+                newColor = new Color((int)equalizedTone, (int)equalizedTone, (int)equalizedTone);
                 break;
             case RED:
-                tone = map[color.getRed()];
+                equalizedTone = map[color.getRed()];
+                newColor = new Color((int)equalizedTone, color.getGreen(), color.getBlue());
                 break;
             case GREEN:
-                tone = map[color.getGreen()];
+                equalizedTone = map[color.getGreen()];
+                newColor = new Color(color.getRed(), (int)equalizedTone, color.getBlue());
                 break;
             case BLUE:
-                tone = map[color.getBlue()];
+                equalizedTone = map[color.getBlue()];
+                newColor = new Color(color.getRed(), color.getGreen(), (int)equalizedTone);
                 break;
             case BRIGHTNESS:
-                tone = map[ColorExtensions.Brightness(image.getRGB(x, y))];
+
+
+                equalizedTone = (float)(map[ColorExtensions.Brightness255(image.getRGB(x, y))]/255);
+                newColor = new Color(Color.HSBtoRGB(hsv[0],hsv[1],equalizedTone));
+
                 break;
             case SATURATION:
-                tone = map[ColorExtensions.Saturations(image.getRGB(x, y))];
+                equalizedTone = (float)(map[ColorExtensions.Saturations255(image.getRGB(x, y))]/255);
+                newColor = new Color(Color.HSBtoRGB(hsv[0],equalizedTone,hsv[2]));
+
                 break;
             case HUE:
-                tone = map[ColorExtensions.Hue(image.getRGB(x, y))];
+                equalizedTone = (float)(map[ColorExtensions.Hue255(image.getRGB(x, y))]/255);
+                newColor = new Color(Color.HSBtoRGB(equalizedTone,hsv[1],hsv[2]));
+
                 break;
         }
 
-        Color newColor = new Color(tone, tone, tone);
 
         return newColor;
     }
@@ -973,9 +1007,10 @@ public class BufferedImageOperation {
     public BufferedImage LoadImage(String filePath) throws IOException {
         return ImageIO.read(new File(filePath));
     }
+
     public boolean SaveImage(BufferedImage image, String extensions, String filePath) throws IOException {
 
-        return ImageIO.write(image,extensions, new File(filePath));
+        return ImageIO.write(image, extensions, new File(filePath));
     }
 
 }
