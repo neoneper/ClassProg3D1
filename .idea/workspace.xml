@@ -2,19 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38c28350-56d6-426d-88aa-de2a7ce762da" name="Default" comment="BUG">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/car.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lara.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ClassProg3D1/br/pucpr/Extensions/BufferedImageOperation$1.class" afterPath="$PROJECT_DIR$/out/production/ClassProg3D1/br/pucpr/Extensions/BufferedImageOperation$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ClassProg3D1/br/pucpr/Extensions/BufferedImageOperation.class" afterPath="$PROJECT_DIR$/out/production/ClassProg3D1/br/pucpr/Extensions/BufferedImageOperation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ClassProg3D1/br/pucpr/Extensions/ColorExtensions.class" afterPath="$PROJECT_DIR$/out/production/ClassProg3D1/br/pucpr/Extensions/ColorExtensions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ClassProg3D1/br/pucpr/atividade2/Atividade2.class" afterPath="$PROJECT_DIR$/out/production/ClassProg3D1/br/pucpr/atividade2/Atividade2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ClassProg3D1/br/pucpr/tde1/TDE1_PerlinNoise.class" afterPath="$PROJECT_DIR$/out/production/ClassProg3D1/br/pucpr/tde1/TDE1_PerlinNoise.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperation.java" afterPath="$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/pucpr/Extensions/ColorExtensions.java" afterPath="$PROJECT_DIR$/src/br/pucpr/Extensions/ColorExtensions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/pucpr/atividade3/Desafio4_ColorHistograma.java" afterPath="$PROJECT_DIR$/src/br/pucpr/atividade3/Desafio4_ColorHistograma.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_joml_joml_1_9_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_3_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_glfw_3_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_glfw_natives_windows_3_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_jemalloc_3_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_jemalloc_natives_windows_3_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_natives_windows_3_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_openal_3_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_openal_natives_windows_3_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_opengl_3_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_opengl_natives_windows_3_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_stb_3_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_lwjgl_lwjgl_stb_natives_windows_3_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/ClassProg3D1.iml" afterPath="$PROJECT_DIR$/ClassProg3D1.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,93 +33,26 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BufferedImageOperation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperation.java">
+      <file leaf-file-name="Triangle.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/br/pucpr/cg/Triangle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="737" column="64" lean-forward="true" selection-start-line="737" selection-start-column="64" selection-end-line="737" selection-end-column="64" />
+            <state relative-caret-position="51">
+              <caret line="176" column="4" lean-forward="true" selection-start-line="176" selection-start-column="4" selection-end-line="176" selection-end-column="4" />
               <folding>
-                <element signature="method#BRIGHTNESS#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#ChangeColorPallet#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetKernelPixelColor#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#CombineToBorder#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetGrayHistogram#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetRedHistogram#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetGreenHistogram#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetBlueHistogram#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetBrightnessHistogram#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetSaturationHistogram#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetHueHistogram#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetGrayHistogramAcc#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetRedHistogramAcc#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetGreenHistogramAcc#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetBlueHistogramAcc#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetBrightnessHistogramAcc#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetSaturationHistogramAcc#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetHueHistogramAcc#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetGrayHistogramEqualized#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetRedHistogramEqualized#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetGreenHistogramEqualized#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetBlueHistogramEqualized#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetBrightnessHistogramEqualized#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetSaturationHistogramEqualized#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetHueHistogramEqualized#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetHistogram#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetHistogramAcc#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#GetHistogramEqualized#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#EqualizeRGB#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#ChangeRedColor#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#ChangGreenColor#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#ChangeBlueColor#0;class#BufferedImageOperation#0" expanded="false" />
-                <element signature="method#ChangeColor#0;class#BufferedImageOperation#0" expanded="false" />
+                <element signature="e#8252#8253#0" expanded="true" />
+                <element signature="e#8292#8293#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="out_lara_hsv.jpg" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/out_lara_hsv.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="out_lara_sv.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out_lara_sv.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="out_lara_sv2.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out_lara_sv2.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="out_lara_brit.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out_lara_brit.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="out_car_sat.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out_car_sat.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Desafio4_ColorHistograma.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade3/Desafio4_ColorHistograma.java">
+      <file leaf-file-name="Window.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/pucpr/mage/Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="33" column="55" lean-forward="true" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+            <state relative-caret-position="349">
+              <caret line="55" column="52" lean-forward="false" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -141,6 +82,7 @@
       <find>GetEqualizedHistogramColor</find>
       <find>totalPixel</find>
       <find>color</find>
+      <find>vao</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -185,13 +127,15 @@
         <option value="$PROJECT_DIR$/src/br/pucpr/Extensions/ColorExtensions.java" />
         <option value="$PROJECT_DIR$/src/br/pucpr/atividade3/Desafio4_ColorHistograma.java" />
         <option value="$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperation.java" />
+        <option value="$PROJECT_DIR$/src/br/pucpr/mage/Window.java" />
+        <option value="$PROJECT_DIR$/src/br/pucpr/cg/Triangle.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1300" />
     <option name="height" value="754" />
   </component>
   <component name="ProjectView">
@@ -209,108 +153,39 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClassProg3D1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClassProg3D1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClassProg3D1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClassProg3D1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pucpr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tde1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClassProg3D1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClassProg3D1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pucpr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Extensions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClassProg3D1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClassProg3D1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pucpr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClassProg3D1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ClassProg3D1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pucpr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="atividade3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="ClassProg3D1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassProg3D1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassProg3D1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassProg3D1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassProg3D1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassProg3D1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pucpr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ClassProg3D1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ClassProg3D1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pucpr" type="462c0819:PsiDirectoryNode" />
+              <item name="cg" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="RecentsManager">
@@ -319,10 +194,11 @@
       <recent name="br.pucpr.atividade2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\p.julio\IdeaProjects\ClassProg3D1" />
+      <recent name="C:\Users\p.julio\IdeaProjects\ClassProg3D1\src\br\pucpr" />
       <recent name="C:\Users\devsecond\IdeaProjects\ClassProg3D1" />
       <recent name="C:\Users\devsecond\IdeaProjects\ClassProg3D1\src\br\pucpr\atividade2" />
       <recent name="C:\Users\devsecond\IdeaProjects\ClassProg3D1\src\br\pucpr\atividade1" />
-      <recent name="C:\Users\devsecond\IdeaProjects\ClassProg3D1\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -337,88 +213,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Desafio4_ColorHistograma">
-    <configuration default="false" name="Atividade2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="br.pucpr.atividade2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="br.pucpr.atividade2.Atividade2" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ClassProg3D1" />
-      <envs />
-      <method />
+  <component name="RunManager" selected="Application.Triangle">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
     </configuration>
-    <configuration default="false" name="Exercicio1_Enbos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="br.pucpr.atividade2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="br.pucpr.atividade2.Exercicio1_Enbos" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ClassProg3D1" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Labs_Experience" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="br.pucpr.atividade3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="br.pucpr.atividade3.Labs_Experience" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ClassProg3D1" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="TDE1_PerlinNoise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="br.pucpr.tde1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="br.pucpr.tde1.TDE1_PerlinNoise" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ClassProg3D1" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Desafio4_ColorHistograma" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Desafio4_ColorHistograma" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="br.pucpr.atividade3.*" />
@@ -436,14 +239,156 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="ClassProg3D1" />
       <envs />
-      <method />
+    </configuration>
+    <configuration name="Exercicio1_Enbos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="br.pucpr.atividade2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="br.pucpr.atividade2.Exercicio1_Enbos" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ClassProg3D1" />
+      <envs />
+    </configuration>
+    <configuration name="Labs_Experience" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="br.pucpr.atividade3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="br.pucpr.atividade3.Labs_Experience" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ClassProg3D1" />
+      <envs />
+    </configuration>
+    <configuration name="TDE1_PerlinNoise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="br.pucpr.tde1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="br.pucpr.tde1.TDE1_PerlinNoise" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ClassProg3D1" />
+      <envs />
+    </configuration>
+    <configuration name="Triangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="br.pucpr.cg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="br.pucpr.cg.Triangle" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ClassProg3D1" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
-      <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
@@ -500,29 +445,6 @@
       </Profilers>
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -537,27 +459,6 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -606,56 +507,20 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Atividade2" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Exercicio1_Enbos" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Labs_Experience" />
-      <item index="3" class="java.lang.String" itemvalue="Application.TDE1_PerlinNoise" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Desafio4_ColorHistograma" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Exercicio1_Enbos" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Labs_Experience" />
+      <item index="2" class="java.lang.String" itemvalue="Application.TDE1_PerlinNoise" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Desafio4_ColorHistograma" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Triangle" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Desafio4_ColorHistograma" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TDE1_PerlinNoise" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Labs_Experience" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Exercicio1_Enbos" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Atividade2" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Triangle" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Desafio4_ColorHistograma" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TDE1_PerlinNoise" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Labs_Experience" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Exercicio1_Enbos" />
       </list>
     </recent_temporary>
   </component>
@@ -747,37 +612,37 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.50292826" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22670807" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2264574" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.49707174" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24011713" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.240625" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39906833" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39798206" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -815,10 +680,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/metroid_laplace_d.jpg" />
-    <entry file="file://$PROJECT_DIR$/metroid_smooth.jpg" />
-    <entry file="file://$PROJECT_DIR$/metroid_smooth2.jpg" />
-    <entry file="file://$PROJECT_DIR$/metroid_smooth3.jpg" />
     <entry file="file://$PROJECT_DIR$/meninas.jpg" />
     <entry file="file://$PROJECT_DIR$/puppy4.jpg" />
     <entry file="file://$PROJECT_DIR$/puppy_hsv.jpg" />
@@ -892,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -930,7 +790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -938,9 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
           <caret line="131" column="77" lean-forward="false" selection-start-line="131" selection-start-column="77" selection-end-line="131" selection-end-column="77" />
-          <folding>
-            <element signature="method#noise#0;class#SimplexNoise#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -991,47 +847,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out_car_hsv.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lara.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out_lara_rgb.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out_car_rgb.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out_lara_sat.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out_car_brit.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out_car_hsv.jpg" />
+    <entry file="file://$PROJECT_DIR$/car.jpg" />
+    <entry file="file://$PROJECT_DIR$/lara.png" />
+    <entry file="file://$PROJECT_DIR$/out_lara_rgb.jpg" />
+    <entry file="file://$PROJECT_DIR$/out_car_rgb.jpg" />
+    <entry file="file://$PROJECT_DIR$/out_lara_sat.jpg" />
+    <entry file="file://$PROJECT_DIR$/out_car_brit.jpg" />
     <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/ColorExtensions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="133" column="22" lean-forward="false" selection-start-line="133" selection-start-column="22" selection-end-line="133" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#Distance#0;class#ColorExtensions#0" expanded="false" />
             <element signature="method#Distance#1;class#ColorExtensions#0" expanded="false" />
             <element signature="method#HexToColor#0;class#ColorExtensions#0" expanded="false" />
@@ -1042,31 +870,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/pucpr/atividade3/Desafio4_ColorHistograma.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="33" column="55" lean-forward="true" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+        <state relative-caret-position="493">
+          <caret line="33" column="55" lean-forward="false" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out_lara_sv.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out_lara_brit.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out_car_sat.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out_lara_sv.jpg" />
+    <entry file="file://$PROJECT_DIR$/out_lara_brit.jpg" />
+    <entry file="file://$PROJECT_DIR$/out_car_sat.jpg" />
+    <entry file="file://$PROJECT_DIR$/out_lara_sv2.jpg" />
+    <entry file="file://$PROJECT_DIR$/out_lara_hsv.jpg" />
     <entry file="file://$PROJECT_DIR$/src/br/pucpr/Extensions/BufferedImageOperation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="737" column="64" lean-forward="true" selection-start-line="737" selection-start-column="64" selection-end-line="737" selection-end-column="64" />
+        <state relative-caret-position="17">
+          <caret line="737" column="64" lean-forward="false" selection-start-line="737" selection-start-column="64" selection-end-line="737" selection-end-column="64" />
           <folding>
             <element signature="method#BRIGHTNESS#0;class#BufferedImageOperation#0" expanded="false" />
             <element signature="method#ChangeColorPallet#0;class#BufferedImageOperation#0" expanded="false" />
@@ -1105,14 +923,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out_lara_sv2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/mage/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out_lara_hsv.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/mage/Keyboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/mage/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="55" column="52" lean-forward="false" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/pucpr/cg/Triangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="176" column="4" lean-forward="true" selection-start-line="176" selection-start-column="4" selection-end-line="176" selection-end-column="4" />
+          <folding>
+            <element signature="e#8252#8253#0" expanded="true" />
+            <element signature="e#8292#8293#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
